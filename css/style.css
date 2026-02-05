@@ -476,7 +476,7 @@ nav a:hover {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(190, 199, 103, 0.9);
+  background: transparent;
   color: white;
   border: none;
   width: 45px;
@@ -492,7 +492,7 @@ nav a:hover {
 }
 
 .image-nav-btn:hover {
-  background: #bec767;
+  background: #bec76750;
   transform: translateY(-50%) scale(1.1);
 }
 
