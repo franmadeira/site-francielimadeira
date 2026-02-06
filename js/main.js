@@ -165,8 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }, 5000); // Change every 5 seconds
 
-  const SUPABASE_URL = "https://wveyaxorxltxhovljqaf.supabase.co";
-  const SUPABASE_ANON_KEY = "sb_publishable_cvti7zJPxpYorhlw7oTsQQ_b4MqKJV-";
+  const LEADS_ENDPOINT = "https://site-francielimadeira.onrender.com/api/lead";
   // Download Modal
   const downloadModal = document.querySelector("#download-modal");
   const downloadButtons = document.querySelectorAll(".js-open-download");
@@ -221,15 +220,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  async function saveLeadToSupabase(email, consent) {
+  async function saveLeadToBrevo(email, consent) {
     try {
-      const response = await fetch(`${SUPABASE_URL}/rest/v1/leads`, {
+      const response = await fetch(LEADS_ENDPOINT, {
         method: "POST",
         headers: {
-          apikey: SUPABASE_ANON_KEY,
-          Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
           "Content-Type": "application/json",
-          Prefer: "return=minimal",
         },
         body: JSON.stringify({ email, consent }),
       });
@@ -272,7 +268,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setDownloadStatus("Salvando seu email...", "");
 
-    const result = await saveLeadToSupabase(downloadEmail.value.trim(), true);
+    const result = await saveLeadToBrevo(downloadEmail.value.trim(), true);
     if (!result.ok) {
       setDownloadStatus("Nao foi possivel salvar seu email. Tente novamente.", "error");
       return;
