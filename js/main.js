@@ -20,9 +20,47 @@ document.addEventListener("DOMContentLoaded", function () {
   const pluginCards = document.querySelectorAll(".plugin-card");
   const carouselSlides = document.querySelectorAll(".carousel-slide");
   const carouselScrollOffset = 80;
+  const mobilePluginsMedia = window.matchMedia("(max-width: 768px)");
+
+  function buildMobilePluginDetails() {
+    pluginCards.forEach((card) => {
+      const existingDetails = card.querySelector(".plugin-mobile-details");
+      if (existingDetails) {
+        existingDetails.remove();
+      }
+
+      const productId = card.getAttribute("data-product");
+      const sourceSlide = document.querySelector(`[data-content="${productId}"]`);
+      const sourceText = sourceSlide
+        ? sourceSlide.querySelector(".carousel-text")
+        : null;
+
+      if (!sourceText) {
+        return;
+      }
+
+      const detailsWrapper = document.createElement("div");
+      detailsWrapper.className = "plugin-mobile-details";
+
+      const detailsContent = sourceText.cloneNode(true);
+      const detailsTitle = detailsContent.querySelector("h3");
+      if (detailsTitle) {
+        detailsTitle.remove();
+      }
+
+      detailsWrapper.appendChild(detailsContent);
+      card.appendChild(detailsWrapper);
+    });
+  }
+
+  buildMobilePluginDetails();
 
   pluginCards.forEach((card) => {
     card.addEventListener("click", function () {
+      if (mobilePluginsMedia.matches) {
+        return;
+      }
+
       const productId = this.getAttribute("data-product");
 
       // Hide all slides
