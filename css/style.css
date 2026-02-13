@@ -271,11 +271,62 @@ nav a:hover {
 }
 
 .plugins-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
+  display: flex;
+  gap: 1.2rem;
+  margin: 0;
+  max-width: none;
+  width: max-content;
+}
+
+.plugins-carousel {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 1400px;
   margin: 0 auto;
+}
+
+.plugins-track {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  flex: 1;
+  padding: 0.5rem 0.25rem 1rem;
+}
+
+.plugins-track::-webkit-scrollbar {
+  display: none;
+}
+
+.plugin-carousel-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid #d7dcc1;
+  background: #ffffff;
+  color: #7f8746;
+  font-size: 1.15rem;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    color 0.2s,
+    border-color 0.2s,
+    background-color 0.2s,
+    opacity 0.2s;
+}
+
+.plugin-carousel-btn:hover {
+  color: #6d7538;
+  border-color: #c8cfa8;
+  background: #f7f9ef;
+}
+
+.plugin-carousel-btn:disabled {
+  opacity: 0.28;
+  cursor: not-allowed;
+  background: #ffffff;
+  color: #8f9498;
+  border-color: #e5e7d8;
 }
 
 .plugin-card {
@@ -293,6 +344,8 @@ nav a:hover {
   justify-content: center;
   text-align: center;
   min-height: 150px;
+  flex: 0 0 220px;
+  cursor: pointer;
 }
 
 .plugin-card:hover {
@@ -1096,14 +1149,24 @@ footer {
   }
 
   .plugins-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 0.9rem;
+  }
+
+  .plugins-carousel {
+    gap: 0.4rem;
+  }
+
+  .plugin-carousel-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 1.05rem;
   }
 
   .plugin-card {
     align-items: center;
     text-align: center;
-    min-height: auto;
+    min-height: 140px;
+    flex-basis: 190px;
   }
 
   .plugin-card h3 {

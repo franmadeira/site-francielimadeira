@@ -19,8 +19,55 @@ document.addEventListener("DOMContentLoaded", function () {
   // Plugin card click functionality
   const pluginCards = document.querySelectorAll(".plugin-card");
   const carouselSlides = document.querySelectorAll(".carousel-slide");
+  const pluginsTrack = document.querySelector(".plugins-track");
+  const pluginsPrevBtn = document.querySelector(".plugin-carousel-btn.prev");
+  const pluginsNextBtn = document.querySelector(".plugin-carousel-btn.next");
   const carouselScrollOffset = 80;
   const mobilePluginsMedia = window.matchMedia("(max-width: 768px)");
+
+  function getPluginScrollStep() {
+    if (!pluginsTrack) return 0;
+    const firstCard = pluginsTrack.querySelector(".plugin-card");
+    if (!firstCard) return pluginsTrack.clientWidth * 0.8;
+
+    const pluginsGrid = pluginsTrack.firstElementChild;
+    const gap =
+      pluginsGrid instanceof HTMLElement
+        ? parseFloat(window.getComputedStyle(pluginsGrid).gap) || 0
+        : 0;
+
+    return firstCard.getBoundingClientRect().width + gap;
+  }
+
+  function updatePluginCarouselButtons() {
+    if (!pluginsTrack || !pluginsPrevBtn || !pluginsNextBtn) return;
+
+    const maxScrollLeft = pluginsTrack.scrollWidth - pluginsTrack.clientWidth;
+    const hasOverflow = maxScrollLeft > 2;
+    pluginsPrevBtn.disabled = !hasOverflow || pluginsTrack.scrollLeft <= 2;
+    pluginsNextBtn.disabled =
+      !hasOverflow || pluginsTrack.scrollLeft >= maxScrollLeft - 2;
+  }
+
+  if (pluginsTrack && pluginsPrevBtn && pluginsNextBtn) {
+    pluginsPrevBtn.addEventListener("click", function () {
+      pluginsTrack.scrollBy({
+        left: -getPluginScrollStep(),
+        behavior: "smooth",
+      });
+    });
+
+    pluginsNextBtn.addEventListener("click", function () {
+      pluginsTrack.scrollBy({
+        left: getPluginScrollStep(),
+        behavior: "smooth",
+      });
+    });
+
+    pluginsTrack.addEventListener("scroll", updatePluginCarouselButtons);
+    window.addEventListener("resize", updatePluginCarouselButtons);
+    updatePluginCarouselButtons();
+  }
 
   function buildMobilePluginDetails() {
     pluginCards.forEach((card) => {
