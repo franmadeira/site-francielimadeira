@@ -1149,24 +1149,31 @@ footer {
   }
 
   .plugins-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
     gap: 0.9rem;
   }
 
   .plugins-carousel {
-    gap: 0.4rem;
+    display: block;
+    max-width: 100%;
   }
 
   .plugin-carousel-btn {
-    width: 32px;
-    height: 32px;
-    font-size: 1.05rem;
+    display: none;
+  }
+
+  .plugins-track {
+    overflow: visible;
+    padding: 0;
   }
 
   .plugin-card {
     align-items: center;
     text-align: center;
     min-height: 140px;
-    flex-basis: 190px;
+    flex-basis: auto;
   }
 
   .plugin-card h3 {
