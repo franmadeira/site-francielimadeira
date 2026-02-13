@@ -16,6 +16,82 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  function renderTestimonials(items) {
+    const testimonialsGrid = document.querySelector(".testimonials-grid");
+    if (!testimonialsGrid) return;
+
+    testimonialsGrid.innerHTML = "";
+
+    items.forEach((item) => {
+      const card = document.createElement("article");
+      card.className = "testimonial-card";
+
+      const text = document.createElement("p");
+      text.className = "testimonial-text";
+      text.textContent = item.text;
+
+      const author = document.createElement("p");
+      author.className = "testimonial-author";
+      author.textContent = item.name || "Cliente";
+
+      const roleLocation = document.createElement("p");
+      roleLocation.className = "testimonial-role-location";
+      roleLocation.textContent = item.role_location || "";
+
+      card.appendChild(text);
+      card.appendChild(author);
+      card.appendChild(roleLocation);
+
+      const hasInstagram =
+        typeof item.instagram_handle === "string" &&
+        item.instagram_handle.trim() !== "" &&
+        typeof item.instagram_url === "string" &&
+        item.instagram_url.trim() !== "";
+      if (hasInstagram) {
+        const instagramLink = document.createElement("a");
+        instagramLink.className = "testimonial-instagram";
+        instagramLink.href = item.instagram_url;
+        instagramLink.target = "_blank";
+        instagramLink.rel = "noopener";
+        instagramLink.textContent = `@${item.instagram_handle.replace(/^@/, "")}`;
+        card.appendChild(instagramLink);
+      }
+
+      testimonialsGrid.appendChild(card);
+    });
+  }
+
+  async function loadTestimonials() {
+    const testimonialsGrid = document.querySelector(".testimonials-grid");
+    if (!testimonialsGrid) return;
+
+    const source = testimonialsGrid.getAttribute("data-source");
+    if (!source) return;
+
+    try {
+      const response = await fetch(source, { cache: "no-store" });
+      if (!response.ok) return;
+
+      const payload = await response.json();
+      if (!Array.isArray(payload) || payload.length === 0) return;
+
+      const isValid = payload.every(
+        (item) =>
+          item &&
+          typeof item.text === "string" &&
+          typeof item.name === "string" &&
+          typeof item.role_location === "string",
+      );
+      if (!isValid) return;
+
+      renderTestimonials(payload);
+    } catch (_error) {
+      // Keep fallback content if loading fails.
+    }
+  }
+
+  loadTestimonials();
+
   // Plugin card click functionality
   const pluginCards = document.querySelectorAll(".plugin-card");
   const carouselSlides = document.querySelectorAll(".carousel-slide");
@@ -25,47 +101,70 @@ document.addEventListener("DOMContentLoaded", function () {
   const carouselScrollOffset = 80;
   const mobilePluginsMedia = window.matchMedia("(max-width: 768px)");
 
-  function getPluginScrollStep() {
-    if (!pluginsTrack) return 0;
-    const firstCard = pluginsTrack.querySelector(".plugin-card");
-    if (!firstCard) return pluginsTrack.clientWidth * 0.8;
+  function centerPluginCard(card, behavior = "smooth") {
+    if (!pluginsTrack || !card || !mobilePluginsMedia.matches) return;
 
-    const pluginsGrid = pluginsTrack.firstElementChild;
-    const gap =
-      pluginsGrid instanceof HTMLElement
-        ? parseFloat(window.getComputedStyle(pluginsGrid).gap) || 0
-        : 0;
+    const trackRect = pluginsTrack.getBoundingClientRect();
+    const cardRect = card.getBoundingClientRect();
+    const cardCenterWithinTrack =
+      cardRect.left - trackRect.left + pluginsTrack.scrollLeft + cardRect.width / 2;
+    const targetScrollLeft = Math.max(
+      0,
+      cardCenterWithinTrack - pluginsTrack.clientWidth / 2,
+    );
 
-    return firstCard.getBoundingClientRect().width + gap;
+    pluginsTrack.scrollTo({
+      left: targetScrollLeft,
+      behavior,
+    });
+  }
+
+  function getActiveProductIndex() {
+    return Array.from(pluginCards).findIndex((card) =>
+      card.classList.contains("active"),
+    );
   }
 
   function updatePluginCarouselButtons() {
-    if (!pluginsTrack || !pluginsPrevBtn || !pluginsNextBtn) return;
+    if (!pluginsPrevBtn || !pluginsNextBtn || pluginCards.length === 0) return;
 
-    const maxScrollLeft = pluginsTrack.scrollWidth - pluginsTrack.clientWidth;
-    const hasOverflow = maxScrollLeft > 2;
-    pluginsPrevBtn.disabled = !hasOverflow || pluginsTrack.scrollLeft <= 2;
-    pluginsNextBtn.disabled =
-      !hasOverflow || pluginsTrack.scrollLeft >= maxScrollLeft - 2;
+    const activeIndex = getActiveProductIndex();
+    const hasActive = activeIndex >= 0;
+    pluginsPrevBtn.disabled = !hasActive || activeIndex === 0;
+    pluginsNextBtn.disabled = !hasActive || activeIndex === pluginCards.length - 1;
   }
 
   if (pluginsTrack && pluginsPrevBtn && pluginsNextBtn) {
     pluginsPrevBtn.addEventListener("click", function () {
-      pluginsTrack.scrollBy({
-        left: -getPluginScrollStep(),
-        behavior: "smooth",
-      });
+      const activeIndex = getActiveProductIndex();
+      const targetIndex = activeIndex > 0 ? activeIndex - 1 : 0;
+      const targetCard = pluginCards[targetIndex];
+      const productId = targetCard?.getAttribute("data-product");
+      if (productId) {
+        activateProduct(productId, { scrollPage: false });
+      }
     });
 
     pluginsNextBtn.addEventListener("click", function () {
-      pluginsTrack.scrollBy({
-        left: getPluginScrollStep(),
-        behavior: "smooth",
-      });
+      const activeIndex = getActiveProductIndex();
+      const startIndex = activeIndex >= 0 ? activeIndex : 0;
+      const targetIndex = Math.min(pluginCards.length - 1, startIndex + 1);
+      const targetCard = pluginCards[targetIndex];
+      const productId = targetCard?.getAttribute("data-product");
+      if (productId) {
+        activateProduct(productId, { scrollPage: false });
+      }
     });
 
-    pluginsTrack.addEventListener("scroll", updatePluginCarouselButtons);
-    window.addEventListener("resize", updatePluginCarouselButtons);
+    window.addEventListener("resize", function () {
+      updatePluginCarouselButtons();
+      const activeCard = Array.from(pluginCards).find((card) =>
+        card.classList.contains("active"),
+      );
+      if (activeCard) {
+        centerPluginCard(activeCard, "auto");
+      }
+    });
     updatePluginCarouselButtons();
   }
 
@@ -102,47 +201,89 @@ document.addEventListener("DOMContentLoaded", function () {
 
   buildMobilePluginDetails();
 
+  function setActiveProduct(productId) {
+    const cards = Array.from(pluginCards);
+    const activeIndex = cards.findIndex(
+      (card) => card.getAttribute("data-product") === productId,
+    );
+
+    cards.forEach((card, index) => {
+      const isActive = index === activeIndex;
+      const isPrev = index === activeIndex - 1;
+      const isNext = index === activeIndex + 1;
+
+      card.classList.toggle("active", isActive);
+      card.classList.toggle("is-prev", isPrev);
+      card.classList.toggle("is-next", isNext);
+    });
+
+    const activeCard = activeIndex >= 0 ? cards[activeIndex] : null;
+    if (activeCard) {
+      centerPluginCard(activeCard, "smooth");
+    }
+    updatePluginCarouselButtons();
+  }
+
+  function activateProduct(productId, options = {}) {
+    const { scrollPage = false } = options;
+    setActiveProduct(productId);
+
+    // Hide all slides
+    carouselSlides.forEach((slide) => slide.classList.remove("active"));
+
+    // Show target slide
+    const targetSlide = document.querySelector(`[data-content="${productId}"]`);
+    if (!targetSlide) {
+      return;
+    }
+
+    targetSlide.classList.add("active");
+
+    // Reset image carousel to first slide
+    const imageSlides = targetSlide.querySelectorAll(".image-slide");
+    imageSlides.forEach((img, idx) => {
+      img.classList.toggle("active", idx === 0);
+    });
+
+    if (!scrollPage || mobilePluginsMedia.matches) {
+      return;
+    }
+
+    // Scroll to carousel smoothly with offset
+    const carouselSection = document.querySelector(".carousel-wrapper");
+    if (carouselSection) {
+      const sectionTop =
+        carouselSection.getBoundingClientRect().top + window.pageYOffset;
+      const targetTop = Math.max(0, sectionTop - carouselScrollOffset - 150);
+      window.scrollTo({
+        top: targetTop,
+        behavior: "smooth",
+      });
+    }
+  }
+
   pluginCards.forEach((card) => {
     card.addEventListener("click", function () {
-      if (mobilePluginsMedia.matches) {
-        return;
-      }
-
       const productId = this.getAttribute("data-product");
+      if (!productId) return;
 
-      // Hide all slides
-      carouselSlides.forEach((slide) => slide.classList.remove("active"));
-
-      // Show target slide
-      const targetSlide = document.querySelector(
-        `[data-content="${productId}"]`,
-      );
-      if (targetSlide) {
-        targetSlide.classList.add("active");
-
-        // Reset image carousel to first slide
-        const imageSlides = targetSlide.querySelectorAll(".image-slide");
-        imageSlides.forEach((img, idx) => {
-          img.classList.toggle("active", idx === 0);
-        });
-
-        // Scroll to carousel smoothly with offset
-        const carouselSection = document.querySelector(".carousel-wrapper");
-        if (carouselSection) {
-          const sectionTop =
-            carouselSection.getBoundingClientRect().top + window.pageYOffset;
-          const targetTop = Math.max(
-            0,
-            sectionTop - carouselScrollOffset - 150,
-          );
-          window.scrollTo({
-            top: targetTop,
-            behavior: "smooth",
-          });
-        }
-      }
+      activateProduct(productId, { scrollPage: false });
     });
   });
+
+  const initialActiveSlide = document.querySelector(".carousel-slide.active");
+  const initialProductId =
+    initialActiveSlide?.getAttribute("data-content") ||
+    pluginCards[0]?.getAttribute("data-product");
+  if (initialProductId) {
+    setActiveProduct(initialProductId);
+    const initialActiveCard = Array.from(pluginCards).find(
+      (card) => card.getAttribute("data-product") === initialProductId,
+    );
+    if (initialActiveCard) {
+      centerPluginCard(initialActiveCard, "auto");
+    }
+  }
 
   // Image carousel navigation within product slides
   const imageNavBtns = document.querySelectorAll(".image-nav-btn");
@@ -376,9 +517,18 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute("href"));
       if (target) {
-        target.scrollIntoView({
+        const header = document.querySelector("header");
+        const headerHeight = header ? header.getBoundingClientRect().height : 0;
+        const extraOffset = 10;
+        const targetTop =
+          target.getBoundingClientRect().top +
+          window.pageYOffset -
+          headerHeight -
+          extraOffset;
+
+        window.scrollTo({
+          top: Math.max(0, targetTop),
           behavior: "smooth",
-          block: "start",
         });
       }
     });
