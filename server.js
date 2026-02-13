@@ -1,9 +1,13 @@
 import express from "express";
 import cors from "cors";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 
 const REQUEST_HEADER_ID = "x-request-id";
 
 const app = express();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const allowedOrigins = new Set([
   "https://francielimadeira.com",
@@ -22,6 +26,7 @@ app.use(
 );
 
 app.use(express.json());
+app.use(express.static(__dirname));
 
 app.use((req, res, next) => {
   const requestId =
@@ -51,6 +56,10 @@ app.use((req, res, next) => {
 
 app.get("/health", (_req, res) => {
   res.status(200).json({ ok: true });
+});
+
+app.get("/", (_req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
 function isValidEmail(value) {
