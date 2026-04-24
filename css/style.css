@@ -36,8 +36,8 @@ header {
 
 nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 1rem;
   padding: 1.5rem 0;
 }
 
@@ -60,6 +60,32 @@ nav ul {
   display: flex;
   list-style: none;
   gap: 2rem;
+  margin-left: auto;
+}
+
+.nav-portal-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.2rem;
+  border-radius: 999px;
+  background: #bec767;
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  box-shadow: 0 8px 18px rgba(190, 199, 103, 0.34);
+}
+
+.nav-portal-btn:hover {
+  background: #a7b24f;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(167, 178, 79, 0.4);
 }
 
 .menu-toggle {
@@ -100,6 +126,11 @@ nav a:hover {
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
+    margin-left: auto;
+  }
+
+  .nav-portal-btn {
+    display: none;
   }
 
   nav ul.nav-links {
@@ -159,8 +190,10 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  justify-content: center;
   gap: 1rem;
   text-align: right;
+  height: 500px;
 }
 
 .hero-title {
@@ -216,9 +249,31 @@ nav a:hover {
 .projeta-overview {
   padding: 4.5rem 0;
   background: #f2f4f1;
-  text-align: center;
+  text-align: left;
   border-top: 1px solid #e3e7dc;
   border-bottom: 1px solid #e3e7dc;
+}
+
+.projeta-overview-inner {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 3rem;
+  align-items: center;
+}
+
+.projeta-overview-video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projeta-overview-video video {
+  width: 60%;
+  border-radius: 16px;
+  box-shadow:
+    0 12px 36px rgba(0, 0, 0, 0.18),
+    0 32px 60px rgba(0, 0, 0, 0.12);
+  display: block;
 }
 
 .projeta-overview h2 {
@@ -230,7 +285,7 @@ nav a:hover {
 
 .projeta-overview p {
   max-width: 78ch;
-  margin: 0 auto 0.9rem;
+  margin: 0 0 0.9rem;
   color: #4c4c4c;
   line-height: 1.75;
 }
@@ -247,14 +302,14 @@ nav a:hover {
   list-style: none;
   padding: 0;
   max-width: 72ch;
-  margin: 1.25rem auto 0;
-  text-align: center;
+  margin: 1.25rem 0 0;
+  text-align: left;
 }
 
 .projeta-overview li {
   display: block;
   width: fit-content;
-  margin: 0 auto 0.65rem;
+  margin: 0 0 0.65rem;
   position: relative;
   padding-left: 1.6rem;
   font-size: 1.08rem;
@@ -277,6 +332,77 @@ nav a:hover {
   font-weight: 700;
   color: #6d7538;
   margin-top: 1rem;
+}
+
+.process-highlight {
+  padding: 2.4rem 0 1.25rem;
+  background: #f2f4f1;
+}
+
+.process-highlight-card {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 32px;
+  border: 1px solid rgba(190, 199, 103, 0.2);
+  background:
+    radial-gradient(
+      circle at 86% 50%,
+      rgba(190, 199, 103, 0.12),
+      transparent 42%
+    ),
+    linear-gradient(145deg, #1e1f1b 0%, #22231f 52%, #1b1c19 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(190, 199, 103, 0.16),
+    0 14px 40px rgba(26, 28, 21, 0.24);
+  padding: 2.25rem 2.5rem;
+  color: #f3f4ef;
+}
+
+.process-highlight-card h2 {
+  margin: 0;
+  max-width: 30ch;
+  font-size: clamp(1.55rem, 2.6vw, 2.35rem);
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #fffefb;
+}
+
+.process-highlight-card p {
+  margin-top: 1.2rem;
+  max-width: 74ch;
+  color: rgba(242, 242, 233, 0.84);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.process-highlight-metrics {
+  margin-top: 1.8rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid rgba(190, 199, 103, 0.16);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.4rem;
+}
+
+.process-metric {
+  text-align: center;
+}
+
+.process-metric strong {
+  display: block;
+  color: #bec767;
+  font-size: clamp(2rem, 2.6vw, 2.9rem);
+  line-height: 1;
+  font-weight: 700;
+}
+
+.process-metric span {
+  display: block;
+  margin-top: 0.5rem;
+  color: rgba(241, 242, 233, 0.85);
+  font-size: 1.02rem;
 }
 
 /* Features Section */
@@ -873,6 +999,34 @@ nav a:hover {
   line-height: 1.8;
 }
 
+.about-stats {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+  max-width: 720px;
+}
+
+.about-stat {
+  padding: 0;
+}
+
+.about-stat strong {
+  display: block;
+  color: #8c9440;
+  font-size: 1.55rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.about-stat span {
+  display: block;
+  margin-top: 0.35rem;
+  color: #4f5640;
+  font-size: 0.94rem;
+  line-height: 1.45;
+}
+
 .about-image {
   display: flex;
   justify-content: center;
@@ -896,6 +1050,13 @@ nav a:hover {
 
   .about-text h2 {
     font-size: 2.2rem;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1436,6 +1597,15 @@ footer {
     padding: 3.5rem 0;
   }
 
+  .projeta-overview-inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .projeta-overview-video {
+    order: -1;
+  }
+
   .projeta-overview h2 {
     font-size: 2.05rem;
   }
@@ -1451,6 +1621,35 @@ footer {
 
   .projeta-overview ul {
     margin-top: 1rem;
+  }
+
+  .process-highlight {
+    padding: 2rem 0 0.9rem;
+  }
+
+  .process-highlight-card {
+    padding: 1.7rem 1.2rem;
+    border-radius: 16px;
+  }
+
+  .process-highlight-card h2 {
+    font-size: 1.55rem;
+  }
+
+  .process-highlight-card p {
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .process-highlight-metrics {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1.35rem;
+    padding-top: 1.2rem;
+  }
+
+  .process-metric span {
+    font-size: 0.94rem;
   }
 
   nav ul {
