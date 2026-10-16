@@ -10,13 +10,13 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css?v=20260424a" />
+    <link rel="stylesheet" href="css/style.css?v=20261016h" />
   </head>
   <body>
     <header>
       <nav class="container">
         <div class="logo">
-          <img src="assets/images/logo_light.png" alt="Logo SketchUp Plugin" />
+          <img src="assets/images/logo_white.png" alt="Logo SketchUp Plugin" />
         </div>
         <button class="menu-toggle" type="button" aria-label="Abrir menu">
           <span></span>
@@ -25,8 +25,6 @@
         </button>
         <ul class="nav-links">
           <li><a href="#home">Início</a></li>
-          <li><a href="#funcionalidades">Funcionalidades</a></li>
-          <li><a href="#plugins">Recursos</a></li>
           <li><a href="#planos">Planos</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#contato">Contato</a></li>
@@ -45,111 +43,208 @@
     <!-- Hero Section - Slim Design -->
     <section class="hero" id="home">
       <div class="container hero-content">
-        <div class="hero-proof-single" aria-label="Indicador de credibilidade">
-          <strong>+1.500</strong>
-          <span>produtos vendidos</span>
+        <div class="hero-copy">
+          <h1 class="hero-title">Do modelo 3D à prancha pronta, em minutos.</h1>
+          <p class="hero-subtitle">
+            Um ecossistema de plugins que transforma seu modelo 3D em
+            possibilidades, conectando cada etapa do projeto, da ideia ao
+            detalhamento.
+            <strong
+              >Mais liberdade para criar, menos tempo com tarefas
+              repetitivas.</strong
+            >
+          </p>
+          <div class="cta-buttons hero-cta">
+            <a
+              href="https://app.francielimadeira.com"
+              class="btn btn-primary"
+              target="_blank"
+              rel="noopener"
+            >
+              Testar 15 dias grátis
+            </a>
+            <a href="#plugins-em-acao" class="btn btn-secondary"
+              >Ver os plugins em ação</a
+            >
+          </div>
+          <p class="hero-fine">
+            Windows e macOS, com SketchUp Pro 2024 ou superior. A licença não
+            renova sozinha.
+          </p>
         </div>
-        <h1 class="hero-title">
-          Seu projeto no SketchUp, mais inteligente e muito mais rápido.
-        </h1>
-        <p class="hero-subtitle">
-          Você já usa SketchUp e LayOut. O Projeta+ transforma essas ferramentas
-          em um processo técnico, padronizado e produtivo — sem retrabalho, sem
-          improvisação.
-        </p>
-        <div class="cta-buttons hero-cta">
-          <a
-            href="https://app.francielimadeira.com"
-            class="btn btn-primary"
-            target="_blank"
-            rel="noopener"
-          >
-            Começar grátis
-          </a>
-          <a href="#plugins" class="btn btn-secondary">Ver como funciona</a>
-        </div>
-      </div>
-    </section>
 
-    <section class="projeta-overview" id="projeta-geral">
-      <div class="container projeta-overview-inner">
-        <div class="projeta-overview-text">
-          <p class="section-label">SOBRE O PROJETA+</p>
-          <h2>
-            Um <strong>sistema completo</strong> para
-            <strong>organizar e otimizar</strong> seu
-            <strong>processo de projeto</strong>
-            no SketchUp.
-          </h2>
-          <p class="overview-lead">
-            O Projeta+ não é apenas um plugin. É um conjunto de ferramentas que
-            estrutura o seu fluxo de trabalho, reduz retrabalho e aumenta a
-            consistência técnica das suas entregas.
-          </p>
-          <p class="overview-lead">
-            Em vez de depender de <strong>ajustes manuais</strong> em cada
-            projeto, você trabalha com
-            <strong>processos inteligentes</strong> que
-            <strong>aceleram etapas críticas</strong> e
-            <strong>reduzem erros</strong>.
-          </p>
-          <ul>
-            <li>Padronização de projetos</li>
-            <li>Automatização de tarefas</li>
-            <li>Mais controle e organização</li>
-            <li>Menos retrabalho</li>
-          </ul>
-          <p class="overview-impact">
-            Menos improviso. Mais controle. Um jeito mais inteligente de
-            desenvolver projetos no SketchUp.
-          </p>
-        </div>
-        <div class="projeta-overview-video">
+        <figure class="hero-photo">
           <video
-            src="assets/images/video-skt.mp4"
+            src="assets/images/capa-site-web.mp4"
+            poster="assets/images/capa-site-poster.jpg"
             autoplay
             muted
             loop
             playsinline
-            aria-label="Demonstração do Projeta+"
+            preload="metadata"
+            aria-label="Demonstração dos plugins Projeta+ em funcionamento"
           ></video>
+        </figure>
+      </div>
+      <div class="hero-hatch" aria-hidden="true"></div>
+    </section>
+
+    <section class="ecosystem" id="projeta-geral">
+      <div class="container">
+        <div class="ecosystem-intro">
+          <p class="section-label">ECOSSISTEMA PROJETA+</p>
+          <h2>Um ecossistema. Infinitas possibilidades para projetar.</h2>
+          <p>
+            Imagine transformar a maneira como você trabalha, com ferramentas
+            que se conectam à sua rotina e simplificam cada etapa do projeto. Da
+            modelagem ao detalhamento, o Projeta+ reúne soluções inteligentes
+            para você dedicar mais tempo ao que realmente importa: criar.
+          </p>
         </div>
       </div>
     </section>
 
-    <section class="process-highlight" aria-label="Impacto de produtividade">
+    <section class="plugin-showcase" id="plugins-em-acao">
       <div class="container">
-        <article class="process-highlight-card">
-          <div class="process-highlight-copy">
-            <h2>
-              Processos que antes levavam horas passam a ser feitos em minutos.
-            </h2>
+        <div class="workflow-intro">
+          <p class="section-label">MAIS POSSIBILIDADES</p>
+          <h2>Seu projeto, suas ideias. Muito mais possibilidades.</h2>
+          <div class="workflow-steps">
+            <article style="--step-delay: 0s">
+              <span>01</span>
+              <h3>Crie com liberdade</h3>
+              <p>
+                Modele e desenvolva seus projetos no SketchUp com ferramentas
+                que acompanham seu processo criativo.
+              </p>
+            </article>
+            <article style="--step-delay: 2s">
+              <span>02</span>
+              <h3>Simplifique cada etapa</h3>
+              <p>
+                Da marcenaria aos revestimentos, dos pontos técnicos aos
+                detalhamentos. Mais agilidade em cada parte do projeto.
+              </p>
+            </article>
+            <article style="--step-delay: 4s">
+              <span>03</span>
+              <h3>Transforme seu trabalho</h3>
+              <p>
+                Automatize tarefas repetitivas, organize suas entregas e tenha
+                mais tempo para o que realmente importa: projetar.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <div class="plugin-picker-heading">
+          <p class="section-label">PLUGINS EM AÇÃO</p>
+          <h2>
+            Conheça as ferramentas que vão transformar sua forma de projetar.
+          </h2>
+          <p>
+            Explore o universo Projeta+ e descubra como cada plugin simplifica
+            sua rotina e permite fazer ainda mais com o SketchUp que você já
+            conhece.
+          </p>
+        </div>
+
+        <div class="plugin-picker">
+          <div
+            class="plugin-picker-options"
+            role="group"
+            aria-label="Plugins do Projeta+"
+          >
+            <p class="plugin-picker-group">Grátis</p>
+            <button type="button" data-demo-plugin="utilidades">
+              <strong>Plugin Utilidades</strong>
+              <span>Tarefas repetitivas em poucos cliques</span>
+            </button>
+            <button type="button" data-demo-plugin="anotacoes">
+              <strong>Plugin Anotações</strong>
+              <span>Documentação técnica com cálculo automático</span>
+            </button>
+
+            <p class="plugin-picker-group">Assinatura Projeta+</p>
+            <button
+              type="button"
+              data-demo-plugin="sketchup"
+              aria-pressed="true"
+            >
+              <strong>SketchUp Inteligente</strong>
+              <span>Cenas, plantas, cortes e detalhamentos</span>
+            </button>
+            <button type="button" data-demo-plugin="tecnicos">
+              <strong>Pontos Técnicos e Iluminação</strong>
+              <span>Elétrica, hidráulica e iluminação</span>
+            </button>
+            <button type="button" data-demo-plugin="layout">
+              <strong>Layout Inteligente</strong>
+              <span>Pranchas padronizadas no LayOut</span>
+            </button>
+            <button type="button" data-demo-plugin="esquadrias">
+              <strong>Plugin Esquadrias</strong>
+              <span>Portas, janelas e esquadrias integradas ao projeto</span>
+            </button>
+            <button type="button" data-demo-plugin="marcenaria">
+              <strong>Plugin Marcenaria</strong>
+              <span>Modelagem e detalhamento de marcenaria</span>
+            </button>
+
+            <p class="plugin-picker-group">Compra avulsa</p>
+            <button type="button" data-demo-plugin="notion">
+              <strong>Template Notion</strong>
+              <span>Projetos, tarefas e prazos do escritório</span>
+            </button>
+          </div>
+
+          <article
+            class="plugin-demo-result"
+            id="plugin-demo-result"
+            aria-live="polite"
+          >
+            <div class="plugin-demo-media">
+              <img
+                src="assets/images/skt_inteligente_01.png"
+                alt="SketchUp Inteligente organizando cenas e vistas do projeto"
+              />
+            </div>
+            <span class="plugin-demo-chip">Assinatura</span>
+            <h3>SketchUp Inteligente</h3>
             <p>
-              Em vez de ajustes manuais em cada projeto, você trabalha com
-              processos inteligentes que aceleram etapas críticas e reduzem
-              erros.
+              Gera cenas, plantas, cortes e detalhamentos a partir do modelo e
+              exporta tudo em lote.
             </p>
-          </div>
-          <div class="process-highlight-metrics">
-            <div class="process-metric">
-              <strong class="js-countup" data-target="80" data-suffix="%"
-                >0%</strong
+            <ul>
+              <li>Organização automática do modelo</li>
+              <li>Exportação em lote</li>
+            </ul>
+            <p class="plugin-demo-note">
+              Incluso nos planos Individual e Premium.
+            </p>
+            <div class="plugin-demo-actions">
+              <a
+                class="btn btn-primary"
+                href="https://app.francielimadeira.com"
+                target="_blank"
+                rel="noopener"
+                >Experimentar 15 dias</a
               >
-              <span>menos tarefas manuais</span>
-            </div>
-            <div class="process-metric">
-              <strong class="js-countup" data-target="3" data-suffix="x"
-                >0x</strong
+              <a
+                class="btn btn-secondary"
+                href="https://youtube.com/playlist?list=PLINQE5LCTA2MVn0ulZzURq9lT7gS5yp7V"
+                target="_blank"
+                rel="noopener"
+                >Assistir aulas</a
               >
-              <span>mais velocidade nas entregas</span>
             </div>
-          </div>
-        </article>
+          </article>
+        </div>
       </div>
     </section>
 
     <!-- Features Section -->
-    <section class="features" id="funcionalidades">
+    <section class="features" id="funcionalidades" hidden>
       <div class="container">
         <p class="section-label">FUNCIONALIDADES</p>
         <h2>Funcionalidades que mudam sua rotina</h2>
@@ -210,7 +305,7 @@
     </section>
 
     <!-- Plugins Section -->
-    <section class="plugins recursos-bg" id="plugins">
+    <section class="plugins recursos-bg" id="plugins" hidden>
       <div class="container">
         <p class="section-label">PLUGINS, BIBLIOTECAS E TEMPLATES</p>
         <h2>Nossos Recursos</h2>
@@ -328,7 +423,7 @@
                   class="btn-r btn-r--primary"
                   target="_blank"
                   rel="noopener"
-                  >Experimentar 7 dias</a
+                  >Experimentar 15 dias</a
                 >
               </div>
             </div>
@@ -421,17 +516,16 @@
 
           <article class="resource-item">
             <div class="resource-media">
-              <img
-                src="assets/icons/marcenaria.png"
-                alt="Biblioteca Marcenaria Dinâmica"
-              />
+              <img src="assets/icons/marcenaria.png" alt="Plugin Marcenaria" />
             </div>
             <div class="resource-copy">
               <div class="resource-meta">
-                <span class="resource-tag resource-tag--avulso">Avulso</span>
-                <span class="resource-tag resource-tag--type">Biblioteca</span>
+                <span class="resource-tag resource-tag--plan"
+                  >Individual ou Premium</span
+                >
+                <span class="resource-tag resource-tag--type">Plugin</span>
               </div>
-              <h3>Biblioteca Marcenaria Dinâmica</h3>
+              <h3>Plugin Marcenaria</h3>
               <p>
                 Modele marcenaria com mais rapidez, precisão e padronização no
                 SketchUp.
@@ -449,11 +543,11 @@
                   >Assistir aula</a
                 >
                 <a
-                  href="https://go.hotmart.com/T94960778T?dp=1"
+                  href="https://app.francielimadeira.com"
                   class="btn-r btn-r--primary"
                   target="_blank"
                   rel="noopener"
-                  >Comprar</a
+                  >Experimentar 15 dias</a
                 >
               </div>
             </div>
@@ -507,138 +601,192 @@
       <div class="container">
         <div class="plans-header">
           <p class="section-label">PLANOS</p>
-          <h2>Escolha o plano ideal para sua rotina</h2>
+          <h2>Escolha o plano que acompanha seu jeito de projetar.</h2>
           <p class="plans-lead">
-            Faça login para assinar diretamente no portal. Todos os planos
-            ativam a licença por máquina.
-            <strong>Compatível com SketchUp 2024 ou superior.</strong>
+            Pagamento único para o período contratado, sem cobrança recorrente
+            ou renovação automática. Todos os planos incluem 2 licenças.
           </p>
         </div>
 
-        <div class="plans-grid" aria-label="Planos de assinatura do Projeta+">
-          <article class="plan-card">
-            <p class="plan-name">Licença: SketchUp Inteligente</p>
-            <p class="plan-price">
-              R$ 159<span class="plan-price-suffix">,90</span>
+        <div class="plans-grid" aria-label="Planos do Projeta+">
+          <article class="plan-card plan-card-individual">
+            <p class="plan-name">PLANO INDIVIDUAL</p>
+            <h3 id="individual-plan-title">Uma ferramenta, do seu jeito.</h3>
+            <p class="plan-description" id="individual-plan-description">
+              Escolha a ferramenta que faz sentido para sua rotina e utilize por
+              um ano.
             </p>
-            <p class="plan-period">
-              365 dias de acesso · no cartão · sem renovação automática · ≈ R$
-              0,44 por dia
+            <p class="plan-price" id="individual-plan-price">R$ 169,90</p>
+            <p class="plan-payment">pagamento único · à vista</p>
+            <p class="plan-equivalent" id="individual-plan-equivalent">
+              Equivale a R$ 0,47 por dia
             </p>
-
-            <p class="plan-section-label">Plugins incluídos</p>
-            <ul class="plan-list">
-              <li>Anotações</li>
-              <li>Utilidades</li>
-              <li>SketchUp Inteligente</li>
-              <li class="off">Pontos Técnicos e Iluminação</li>
-              <li class="off">Layout Inteligente</li>
-            </ul>
-
-            <div class="plan-spacer"></div>
-            <div class="plan-card-footer">
-              <span>Uso em até 2 máquinas</span>
-              <span>Automação de tarefas repetitivas</span>
-              <span>Padronização de processos</span>
+            <div class="plan-meta">
+              <span>365 dias · 2 licenças · SketchUp 2024+</span>
             </div>
+            <p class="plan-section-label">Benefícios</p>
+            <ul class="plan-list">
+              <li>Escolha uma ferramenta específica</li>
+              <li>Sem renovação automática</li>
+            </ul>
+            <a
+              class="plan-cta"
+              href="https://app.francielimadeira.com"
+              target="_blank"
+              rel="noopener"
+              >Escolher minha ferramenta</a
+            >
           </article>
 
           <article class="plan-card">
-            <p class="plan-name">Licença: Pontos Técnicos + Iluminação</p>
-            <p class="plan-price">
-              R$ 159<span class="plan-price-suffix">,90</span>
+            <p class="plan-name">PLANO MENSAL</p>
+            <h3>Flexibilidade para começar.</h3>
+            <p class="plan-description">
+              As ferramentas de produtividade do Projeta+ para acompanhar seus
+              projetos, sem compromisso anual.
             </p>
-            <p class="plan-period">
-              365 dias de acesso · no cartão · sem renovação automática · ≈ R$
-              0,44 por dia
-            </p>
-
-            <p class="plan-section-label">Plugins incluídos</p>
-            <ul class="plan-list">
-              <li>Anotações</li>
-              <li>Utilidades</li>
-              <li>Pontos Técnicos e Iluminação</li>
-              <li class="off">SketchUp Inteligente</li>
-              <li class="off">Layout Inteligente</li>
-            </ul>
-
-            <div class="plan-spacer"></div>
-            <div class="plan-card-footer">
-              <span>Uso em até 2 máquinas</span>
-              <span>Blocos dinâmicos completos</span>
-              <span>Relatórios automáticos</span>
+            <p class="plan-price">R$ 59,90</p>
+            <p class="plan-payment">pagamento único · 30 dias</p>
+            <p class="plan-equivalent">Equivale a R$ 2,00 por dia</p>
+            <div class="plan-meta">
+              <span>30 dias · 2 licenças · SketchUp 2024+</span>
             </div>
+            <p class="plan-section-label">Inclui</p>
+            <ul class="plan-list">
+              <li>SketchUp Inteligente</li>
+              <li>LayOut Inteligente</li>
+              <li>Mobiliário</li>
+              <li>Revestimentos</li>
+              <li>Esquadrias</li>
+            </ul>
+            <p class="plan-limitation">
+              <strong>Não inclui:</strong> bibliotecas de Pontos Técnicos,
+              Iluminação e Marcenaria.
+            </p>
+            <a
+              class="plan-cta"
+              href="https://app.francielimadeira.com"
+              target="_blank"
+              rel="noopener"
+              >Escolher o Mensal</a
+            >
           </article>
 
           <article class="plan-card">
-            <p class="plan-name">Plano Mensal</p>
-            <p class="plan-price">
-              R$ 49<span class="plan-price-suffix">,99</span>
+            <p class="plan-name">PLANO ANUAL</p>
+            <h3>Produtividade o ano inteiro.</h3>
+            <p class="plan-description">
+              Os mesmos plugins do Mensal, com acesso por 365 dias e mais
+              economia.
             </p>
-            <p class="plan-period">
-              30 dias de acesso · no cartão · sem renovação automática · ≈ R$
-              1,67 por dia
-            </p>
-
-            <p class="plan-section-label">Plugins incluídos</p>
-            <ul class="plan-list">
-              <li>Anotações</li>
-              <li>Utilidades</li>
-              <li>SketchUp Inteligente</li>
-              <li class="off">Pontos Técnicos e Iluminação</li>
-              <li class="off">Layout Inteligente</li>
-            </ul>
-
-            <div class="plan-spacer"></div>
-            <div class="plan-card-footer">
-              <span>Uso em 1 máquina</span>
-              <span>Ideal para testar o sistema</span>
-              <span>Integração com seu fluxo</span>
+            <p class="plan-price">R$ 249,90</p>
+            <p class="plan-payment">pagamento único · à vista</p>
+            <p class="plan-equivalent">Equivale a R$ 0,68 por dia</p>
+            <div class="plan-meta">
+              <span>365 dias · 2 licenças · SketchUp 2024+</span>
             </div>
+            <p class="plan-section-label">Inclui</p>
+            <ul class="plan-list">
+              <li>SketchUp Inteligente</li>
+              <li>LayOut Inteligente</li>
+              <li>Mobiliário</li>
+              <li>Revestimentos</li>
+              <li>Esquadrias</li>
+            </ul>
+            <p class="plan-limitation">
+              <strong>Não inclui:</strong> bibliotecas de Pontos Técnicos,
+              Iluminação e Marcenaria.
+            </p>
+            <p class="plan-saving">
+              Economize cerca de 65% comparado a 12 planos mensais.
+            </p>
+            <a
+              class="plan-cta"
+              href="https://app.francielimadeira.com"
+              target="_blank"
+              rel="noopener"
+              >Escolher o Anual</a
+            >
           </article>
 
           <article class="plan-card plan-card-popular">
             <div class="plan-popular-badge">MAIS COMPLETO</div>
-            <p class="plan-name">Plano Premium</p>
-            <p class="plan-price">
-              R$ 299<span class="plan-price-suffix">,90</span>
+            <p class="plan-name">PLANO PREMIUM</p>
+            <h3>Todo o universo Projeta+ em um só plano.</h3>
+            <p class="plan-description">
+              Mais ferramentas e bibliotecas de blocos dinâmicos para criar,
+              modelar e detalhar seus projetos.
             </p>
-            <p class="plan-period">
-              365 dias de acesso · no cartão · sem renovação automática · ≈ R$
-              0,82 por dia
-            </p>
-
-            <p class="plan-section-label">Plugins incluídos</p>
-            <ul class="plan-list">
-              <li>Anotações</li>
-              <li>Utilidades</li>
-              <li>SketchUp Inteligente</li>
-              <li>Pontos Técnicos e Iluminação</li>
-              <li>Layout Inteligente</li>
-            </ul>
-
-            <div class="plan-spacer"></div>
-            <div class="plan-card-footer">
-              <span>Uso em até 2 máquinas</span>
-              <span>Acesso a todos os plugins</span>
-              <span>Fluxo completo e profissional</span>
+            <p class="plan-price">R$ 389,90</p>
+            <p class="plan-payment">pagamento único · à vista</p>
+            <p class="plan-equivalent">Equivale a R$ 1,07 por dia</p>
+            <div class="plan-meta">
+              <span>365 dias · 2 licenças · SketchUp 2024+</span>
             </div>
+            <p class="plan-section-label">Inclui</p>
+            <ul class="plan-list">
+              <li>Tudo o que está incluído no plano Anual</li>
+              <li>Pontos Técnicos e Iluminação</li>
+              <li>Blocos dinâmicos de Pontos Técnicos e Iluminação</li>
+              <li>Blocos dinâmicos de Marcenaria</li>
+            </ul>
+            <p class="plan-comparison">
+              Por R$ 11,67 a mais por mês que o Anual, tenha todos os recursos
+              Premium.
+            </p>
+            <a
+              class="plan-cta plan-cta-premium"
+              href="https://app.francielimadeira.com"
+              target="_blank"
+              rel="noopener"
+              >Quero o Premium</a
+            >
           </article>
         </div>
 
-        <div class="plans-action">
-          <a
-            href="https://app.francielimadeira.com"
-            class="btn-plans-cta"
-            target="_blank"
-            rel="noopener"
-            >Fazer login e escolher meu plano</a
-          >
-          <p class="plans-action-note">
-            Todos os planos são gerenciados no portal.
-            <strong>7 dias grátis para experimentar.</strong>
-          </p>
+        <div class="plans-support">
+          <article>
+            <h3>Precisa de mais computadores?</h3>
+            <p>
+              Todos os planos permitem ativação em até 2 computadores. Se você
+              precisa de acessos adicionais para sua equipe ou escritório,
+              consulte as condições com nosso suporte.
+            </p>
+            <a
+              href="https://wa.me/5548999425550?text=Ol%C3%A1%21%20Gostaria%20de%20consultar%20as%20condi%C3%A7%C3%B5es%20para%20adicionar%20mais%20computadores%20%C3%A0%20minha%20licen%C3%A7a%20Projeta%2B."
+              target="_blank"
+              rel="noopener"
+              >Falar pelo WhatsApp</a
+            >
+          </article>
+          <article>
+            <h3>Prefere parcelar?</h3>
+            <p>
+              Os valores apresentados são para pagamento único, à vista.
+              Consulte as opções disponíveis; o parcelamento pode incluir taxas
+              e juros do serviço de pagamento, por conta do cliente.
+            </p>
+            <a
+              href="https://wa.me/5548999425550?text=Ol%C3%A1%21%20Gostaria%20de%20consultar%20as%20op%C3%A7%C3%B5es%20de%20parcelamento%20dos%20planos%20Projeta%2B."
+              target="_blank"
+              rel="noopener"
+              >Consultar pelo WhatsApp</a
+            >
+          </article>
         </div>
+        <p class="plans-legal-note">
+          <span class="plans-license-note">As 2 licenças correspondem à ativação em até 2 computadores. Compatível com SketchUp Pro 2024 ou superior, no Windows e macOS.</span>
+          Licenças com prazo determinado. Pagamento único, sem renovação
+          automática. Ao término do período contratado, você decide se deseja
+          renovar. Todos os planos recebem atualizações durante a vigência da
+          licença.
+          <span class="plans-terms-line">Consulte nossos
+            <button type="button" class="legal-link" data-legal-doc="terms">Termos de Uso</button>,
+            <button type="button" class="legal-link" data-legal-doc="privacy">Política de Privacidade</button>
+            e
+            <button type="button" class="legal-link" data-legal-doc="refund">Política de Cancelamento e Reembolso</button>
+            antes de contratar.</span>
+        </p>
       </div>
     </section>
 
@@ -649,41 +797,45 @@
           <p class="section-label">QUEM ESTÁ POR TRÁS DO PROJETA+</p>
           <h2>Francieli Madeira</h2>
           <p>
-            Arquiteta, Designer de Interiores e Desenvolvedora de Soluções para
-            SketchUp
+            A arquitetura faz parte da minha trajetória há mais de 10 anos. E
+            foi justamente na rotina de projetos que comecei a perceber quantas
+            tarefas poderiam ser mais simples, rápidas e inteligentes.
           </p>
           <p>
-            Atuo com projetos e desenvolvimento de soluções para arquitetura e
-            interiores, sempre buscando formas mais eficientes de organizar e
-            executar projetos.
+            Foi assim que comecei a desenvolver minhas próprias ferramentas. O
+            que nasceu da necessidade de facilitar meu trabalho acabou se
+            transformando em soluções que hoje ajudam outros profissionais a
+            criar, organizar e detalhar seus projetos.
           </p>
           <p>
-            Já desenvolvi centenas de recursos entre templates, blocos
-            dinâmicos, plugins e métodos de projeto, sempre com foco em
-            aplicação prática e resultados reais.
+            Ao longo dessa jornada, desenvolvi centenas de recursos, entre
+            plugins, blocos dinâmicos e templates. Cada ferramenta carrega um
+            pouco da minha experiência, dos desafios que encontrei e da vontade
+            de fazer diferente.
           </p>
           <p>
-            Minha fé guia a forma como trabalho e desenvolvo soluções, buscando
-            sempre excelência, propósito e impacto real na vida de outros
-            profissionais.
+            Mais do que desenvolver tecnologia, acredito em criar soluções que
+            realmente façam diferença na rotina de quem projeta. E minha fé faz
+            parte disso: é ela que orienta meus valores, meu compromisso com a
+            excelência e o propósito que coloco em tudo o que faço.
           </p>
           <div class="about-stats" aria-label="Indicadores de experiência">
             <div class="about-stat">
-              <strong>+10 anos</strong>
+              <strong>+12 anos</strong>
               <span>de experiência na área</span>
             </div>
             <div class="about-stat">
-              <strong>+1.500</strong>
+              <strong>+1.700</strong>
               <span>produtos vendidos</span>
             </div>
             <div class="about-stat">
-              <strong>+350</strong>
+              <strong>+650</strong>
               <span>profissionais na comunidade</span>
             </div>
           </div>
         </div>
         <div class="about-image">
-          <img src="assets/images/quemeusou2.jpeg" alt="Francieli Madeira" />
+          <img src="assets/images/quemeusou2.jpg" alt="Francieli Madeira" />
         </div>
       </div>
     </section>
@@ -785,161 +937,118 @@
 
     <!-- FAQ Section -->
     <section class="faq" id="faq">
-      <div class="container">
-        <h2>Perguntas Frequentes</h2>
-        <div class="faq-item">
-          <button class="faq-question">
-            O que é o Projeta+?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>
-              O Projeta+ é um conjunto de ferramentas inteligentes para o
-              SketchUp focado em produtividade, padronização e automação. A
-              ideia é reduzir tarefas repetitivas, minimizar erros e deixar o
-              fluxo de projeto mais rápido, confiável e organizado.
-            </p>
-          </div>
+      <div class="container faq-layout">
+        <div class="faq-intro">
+          <p class="section-label">PERGUNTAS FREQUENTES</p>
+          <h2>Ficou com alguma dúvida?</h2>
+          <p>Reunimos aqui as respostas sobre plugins, licenças, instalação e suporte.</p>
+          <a
+            class="faq-support-link"
+            href="https://wa.me/5548999425550?text=Ol%C3%A1%21%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20Projeta%2B."
+            target="_blank"
+            rel="noopener"
+          >Não encontrou a resposta? Fale com a gente</a>
         </div>
 
-        <div class="faq-item">
-          <button class="faq-question">
-            O Projeta+ é um plugin único ou vários plugins?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>
-              O Projeta+ é formado por vários plugins independentes, que se
-              complementam entre si para oferecer uma experiência mais completa.
-              Ainda assim, cada plugin pode ser usado separadamente, sem
-              qualquer prejuízo ao funcionamento.
-            </p>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">
+              O que é o Projeta+?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>É um ecossistema de ferramentas para SketchUp criado para automatizar tarefas repetitivas, organizar o projeto e agilizar a documentação.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="faq-item">
-          <button class="faq-question">
-            Para quem o Projeta+ foi pensado?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>
-              Principalmente para: Arquitetos, Designers de Interiores,
-              profissionais que usam SketchUp no dia a dia, escritórios que
-              precisam de padrão e consistência entre projetos. Mas qualquer
-              pessoa que queira ganhar tempo no SketchUp pode se beneficiar.
-            </p>
+          <div class="faq-item">
+            <button class="faq-question">
+              É um plugin único ou vários plugins?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>São plugins independentes que se complementam. Você pode usar cada ferramenta separadamente ou combiná-las conforme o seu fluxo de trabalho.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="faq-item">
-          <button class="faq-question">
-            Como funciona os licenciamentos?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>
-              O licenciamento do plugins do Projeta+ é feito por meio de
-              licenças com serial, vinculadas a máquinas ativas. Esse modelo
-              oferece mais controle ao usuário, aumenta a segurança do projeto e
-              permite gerenciar facilmente quais computadores estão autorizados,
-              com a possibilidade de liberar ou desativar máquinas sempre que
-              necessário.
-            </p>
+          <div class="faq-item">
+            <button class="faq-question">
+              Para quem o Projeta+ foi pensado?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Para arquitetos, designers de interiores, projetistas, estudantes e escritórios que usam SketchUp e buscam mais agilidade, organização e padrão nas entregas.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="faq-item">
-          <button class="faq-question">
-            Posso usar a mesma licença em mais de um computador?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>
-              Sim. Cada plano permite o uso em até 2 máquinas, e o gerenciamento
-              das licenças é feito de forma automática, garantindo praticidade e
-              nenhuma complicação para o usuário. Caso seja necessário utilizar
-              o plugin em mais de dois dispositivos simultaneamente, basta
-              entrar em contato com a nossa equipe através do e-mail
-              projetamais.suporte@gmail.com para avaliar a melhor opção de
-              licenciamento para o seu caso.
-            </p>
+          <div class="faq-item">
+            <button class="faq-question">
+              Como funcionam as licenças?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>As licenças possuem prazo determinado, pagamento único e não renovam automaticamente. A ativação é vinculada aos computadores autorizados e pode ser gerenciada pelo usuário.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="faq-item">
-          <button class="faq-question">
-            Como recebo a licença após a compra?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>
-              A chave de licença é enviada automaticamente para o e-mail
-              cadastrado no momento da compra, normalmente em poucos minutos,
-              juntamente com as instruções de instalação do plugin.
-            </p>
+          <div class="faq-item">
+            <button class="faq-question">
+              Posso usar a licença em mais de um computador?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Sim. Cada plano permite ativação em até 2 computadores. Para uma quantidade maior, fale com o suporte e consulte as condições para equipes e escritórios.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="faq-item">
-          <button class="faq-question">
-            Os plugins do Projeta+ deixam meu SketchUp mais pesado?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>
-              Não. O Projeta+ é desenvolvido para ser leve e eficiente: as
-              ferramentas executam ações pontuais, evitam processos contínuos
-              desnecessários e carregam apenas o que está sendo efetivamente
-              utilizado no momento. Ainda assim, arquivos muito pesados tendem a
-              demandar mais tempo para carregar determinadas funções, o que é um
-              comportamento normal dentro do SketchUp. Caso ocorram travamentos
-              fora do comum, recomendamos entrar em contato com o suporte para
-              análise.
-            </p>
+          <div class="faq-item">
+            <button class="faq-question">
+              Como recebo a licença após a compra?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>A chave de licença e as instruções de instalação são enviadas ao e-mail informado na compra, normalmente poucos minutos após a confirmação do pagamento.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="faq-item">
-          <button class="faq-question">
-            Qual versão do SketchUp é necessária?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>
-              O plugin é recomendado para uso com o SketchUp Pro 2024 ou versões
-              superiores, no Windows. Versões anteriores podem apresentar
-              limitações ou não ser totalmente suportadas.
-            </p>
+          <div class="faq-item">
+            <button class="faq-question">
+              Os plugins deixam o SketchUp mais pesado?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>As ferramentas executam ações pontuais e carregam somente os recursos necessários. Projetos muito pesados ainda podem exigir mais processamento, como ocorre normalmente no SketchUp.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="faq-item">
-          <button class="faq-question">
-            Onde as aulas do Projeta+ estarão disponíveis?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>
-              As aulas do Projeta+ estarão disponíveis no YouTube e na
-              plataforma da Hotmart dentro de cada curso, organizadas em
-              playlists específicas. Cada playlist contará com suas próprias
-              videoaulas, facilitando o acesso, o acompanhamento e a evolução no
-              aprendizado de cada módulo.
-            </p>
+          <div class="faq-item">
+            <button class="faq-question">
+              Qual versão do SketchUp é necessária?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Recomendamos o SketchUp Pro 2024 ou superior, no Windows ou macOS. Versões anteriores podem apresentar limitações e não são totalmente suportadas.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="faq-item">
-          <button class="faq-question">
-            Vocês oferecem suporte técnico?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>
-              Sim. Oferecemos suporte técnico por e-mail, WhatsApp e também por
-              meio das nossas redes sociais para todos os usuários licenciados.
-            </p>
+          <div class="faq-item">
+            <button class="faq-question">
+              Onde encontro as aulas?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>As aulas ficam disponíveis em playlists no YouTube e, quando vinculadas a um produto adquirido, dentro do respectivo curso na Hotmart.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Vocês oferecem suporte técnico?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Sim. Usuários licenciados recebem suporte pelos canais oficiais do Projeta+, incluindo e-mail e WhatsApp.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -960,16 +1069,7 @@
             técnico dos seus projetos.
           </p>
         </div>
-        <div class="footer-section">
-          <h4>Links Rápidos</h4>
-          <ul>
-            <li><a href="#home">Início</a></li>
-            <li><a href="#funcionalidades">Funcionalidades</a></li>
-            <li><a href="#plugins">Plugins</a></li>
-            <li><a href="#faq">FAQ</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
+        <div class="footer-section footer-section-contact">
           <h4>Redes Sociais</h4>
           <div class="social-links">
             <a
@@ -1011,6 +1111,201 @@
       </div>
     </footer>
 
-    <script src="js/main.js?v=20260424a"></script>
+    <div class="legal-modal" id="legal-modal" aria-hidden="true">
+      <div class="legal-modal__overlay" data-legal-close></div>
+      <section
+        class="legal-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="legal-modal-title"
+      >
+        <header class="legal-modal__header">
+          <div>
+            <p>PROJETA+</p>
+            <h2 id="legal-modal-title">Documento legal</h2>
+          </div>
+          <button type="button" class="legal-modal__close" data-legal-close aria-label="Fechar documento">×</button>
+        </header>
+        <div class="legal-modal__body" id="legal-modal-body"></div>
+      </section>
+    </div>
+
+    <template id="legal-terms-template">
+      <article class="legal-document">
+        <p class="legal-document__updated">Termos de Uso e Licença de Produtos Digitais</p>
+        <h3>1. Objeto</h3>
+        <p>Este instrumento regula o uso de plugins, extensões, bibliotecas digitais, blocos, arquivos associados e demais conteúdos digitais disponibilizados ao usuário, doravante denominados, em conjunto, “Materiais”.</p>
+        <p>Ao adquirir, instalar, acessar ou utilizar os Materiais, o usuário declara que leu, compreendeu e concorda integralmente com estes Termos.</p>
+        <h3>2. Concessão de Licença</h3>
+        <p>2.1. Os Materiais são licenciados, não vendidos.</p>
+        <p>2.2. A licença concedida é individual, pessoal, intransferível, não exclusiva e revogável.</p>
+        <p>2.3. O usuário está autorizado a utilizar os Materiais para fins profissionais e/ou acadêmicos, exclusivamente em ambiente próprio.</p>
+        <h3>3. Restrições de Uso</h3>
+        <p>É expressamente proibido ao usuário:</p>
+        <ol type="a">
+          <li>compartilhar, revender, sublicenciar, redistribuir ou disponibilizar os Materiais, no todo ou em parte, a terceiros;</li>
+          <li>publicar, hospedar ou divulgar arquivos, modelos, blocos, rotinas, código-fonte ou partes dos Materiais em quaisquer plataformas físicas ou digitais;</li>
+          <li>modificar, adaptar ou explorar os Materiais com finalidade comercial concorrente;</li>
+          <li>incorporar os Materiais em produtos, serviços, pacotes ou soluções destinados à revenda ou distribuição;</li>
+          <li>burlar, modificar ou tentar contornar sistemas de ativação, proteção ou controle de licença;</li>
+          <li>utilizar os Materiais para treinamento, alimentação ou desenvolvimento de modelos de inteligência artificial sem autorização expressa do titular.</li>
+        </ol>
+        <p>O descumprimento destas restrições poderá resultar no cancelamento imediato da licença, sem prejuízo das medidas legais cabíveis, observada a legislação vigente.</p>
+        <h3>4. Propriedade Intelectual</h3>
+        <p>4.1. Todos os direitos autorais, patrimoniais e de propriedade intelectual sobre os Materiais pertencem exclusivamente ao titular.</p>
+        <p>4.2. A concessão de licença não transfere titularidade, cessão ou qualquer direito patrimonial ao usuário.</p>
+        <p>4.3. É vedada a engenharia reversa, descompilação ou extração de elementos estruturais, salvo nas hipóteses expressamente permitidas por lei.</p>
+        <h3>5. Atualizações e Evolução</h3>
+        <p>5.1. Atualizações, melhorias ou novas versões poderão ser disponibilizadas a critério exclusivo do titular.</p>
+        <p>5.2. Funcionalidades podem ser alteradas, ampliadas, otimizadas ou descontinuadas sem aviso prévio.</p>
+        <p>5.3. O acesso a atualizações pode depender do plano contratado ou da política comercial vigente no momento.</p>
+        <h3>6. Suporte Técnico</h3>
+        <p>6.1. O suporte técnico é prestado exclusivamente pelos canais oficiais divulgados pelo titular.</p>
+        <p>6.2. O suporte não inclui customizações específicas, consultorias técnicas ou desenvolvimento sob demanda.</p>
+        <p>6.3. A instalação, configuração, ambiente operacional, compatibilidade com softwares de terceiros e manutenção do sistema são de responsabilidade do usuário.</p>
+        <h3>7. Garantias e Limitações</h3>
+        <p>7.1. Os Materiais são fornecidos “no estado em que se encontram”, sem garantias explícitas ou implícitas de desempenho específico.</p>
+        <p>7.2. Não há garantia de compatibilidade com versões futuras de softwares, sistemas operacionais ou plataformas de terceiros.</p>
+        <p>7.3. O titular não se responsabiliza por perdas de dados, falhas operacionais, danos indiretos, improdutividade, retrabalho ou prejuízos decorrentes do uso ou da impossibilidade de uso dos Materiais.</p>
+        <h3>8. Obrigações do Usuário</h3>
+        <p>O usuário compromete-se a:</p>
+        <ol type="a">
+          <li>respeitar a legislação vigente e as normas técnicas aplicáveis ao seu exercício profissional;</li>
+          <li>manter cópias de segurança de seus projetos e arquivos;</li>
+          <li>utilizar os Materiais de forma ética, responsável e em conformidade com estes Termos.</li>
+        </ol>
+        <h3>9. Privacidade e Dados</h3>
+        <p>São coletados apenas os dados mínimos necessários para autenticação, controle de licença, segurança e prevenção de fraudes. Não há comercialização de dados pessoais.</p>
+        <h3>10. Cancelamento da Licença</h3>
+        <p>O descumprimento destes Termos poderá resultar no cancelamento da licença, temporária ou definitiva, conforme a gravidade da infração, respeitada a legislação aplicável.</p>
+        <h3>11. Reembolsos e Direito de Arrependimento</h3>
+        <p>O direito de arrependimento previsto no art. 49 do Código de Defesa do Consumidor será garantido nos casos legalmente aplicáveis.</p>
+        <p>Considera-se que houve consumo do produto digital quando caracterizado o uso efetivo dos Materiais, incluindo, mas não se limitando a:</p>
+        <ul>
+          <li>ativação da licença;</li>
+          <li>utilização dos Materiais em projetos;</li>
+          <li>violação das restrições de uso;</li>
+          <li>compartilhamento ou tentativa de compartilhamento;</li>
+          <li>burla ou tentativa de burla dos sistemas de proteção.</li>
+        </ul>
+        <p>Nessas hipóteses, o reembolso poderá ser limitado ou não aplicável, conforme a legislação vigente e a análise do caso concreto.</p>
+        <h3>12. Vigência da Licença</h3>
+        <p>A licença permanecerá válida enquanto o usuário cumprir estes Termos e enquanto houver disponibilidade comercial dos Materiais.</p>
+        <h3>13. Foro</h3>
+        <p>Fica eleito o foro do domicílio do usuário para dirimir eventuais controvérsias decorrentes deste instrumento.</p>
+        <h3>14. Alterações dos Termos</h3>
+        <p>O titular poderá modificar estes Termos a qualquer tempo, mediante atualização do documento, sem prejuízo dos direitos adquiridos. A continuidade do uso dos Materiais após a publicação das alterações será considerada como aceitação da nova versão.</p>
+        <h3>15. Limitação de Responsabilidade</h3>
+        <p>Em nenhuma hipótese o titular será responsável por danos indiretos, lucros cessantes, perda de oportunidades, interrupção de atividades, falhas de projeto ou quaisquer prejuízos decorrentes do uso ou da impossibilidade de uso dos Materiais.</p>
+        <h3>16. Caso Fortuito e Força Maior</h3>
+        <p>O titular não será responsabilizado por falhas decorrentes de eventos fora de seu controle, incluindo falhas de energia, internet, servidores, atualizações de softwares de terceiros, eventos naturais ou atos governamentais.</p>
+        <h3>17. Independência das Cláusulas</h3>
+        <p>Caso qualquer disposição destes Termos seja considerada inválida ou inexequível, as demais permanecerão em pleno vigor.</p>
+        <h3>18. Comunicação Oficial</h3>
+        <p>Toda comunicação relacionada a estes Termos deverá ocorrer exclusivamente pelos canais oficiais divulgados pelo titular.</p>
+        <h3>Aceite</h3>
+        <p>O aceite destes Termos ocorre de forma expressa no momento da aquisição e/ou instalação dos Materiais, sendo condição indispensável para liberação e manutenção da licença.</p>
+      </article>
+    </template>
+
+    <template id="legal-privacy-template">
+      <article class="legal-document">
+        <p class="legal-document__updated">Última atualização: 16 de outubro de 2026</p>
+        <p>Esta Política de Privacidade explica como o Projeta+, sob responsabilidade de Francieli Madeira, trata dados pessoais relacionados a este site, ao portal, ao licenciamento, às compras e ao suporte. O tratamento observa a Lei nº 13.709/2018 - Lei Geral de Proteção de Dados Pessoais (LGPD).</p>
+        <h3>1. Quem controla os dados</h3>
+        <p>O Projeta+, sob responsabilidade de Francieli Madeira, é o controlador dos dados pessoais tratados diretamente em seus canais. Solicitações relacionadas à privacidade podem ser enviadas para <a href="mailto:projetamais.suporte@gmail.com">projetamais.suporte@gmail.com</a> ou pelo WhatsApp <a href="https://wa.me/5548999425550" target="_blank" rel="noopener">+55 48 99942-5550</a>.</p>
+        <h3>2. Dados que podem ser tratados</h3>
+        <ul>
+          <li><strong>Dados fornecidos por você:</strong> nome, e-mail, telefone, mensagens, dados de cadastro, suporte, compra e licenciamento.</li>
+          <li><strong>Dados técnicos:</strong> endereço IP, data e hora de acesso, navegador, dispositivo, páginas acessadas, identificadores de requisição e registros necessários à segurança e ao funcionamento dos serviços.</li>
+          <li><strong>Dados de transações:</strong> informações sobre pedido, plano, situação do pagamento e licença. Dados completos de cartão não são armazenados diretamente pelo Projeta+ e são tratados pela plataforma de pagamento.</li>
+        </ul>
+        <h3>3. Para que usamos os dados</h3>
+        <ul>
+          <li>criar e administrar contas, licenças e acessos;</li>
+          <li>processar pedidos e confirmar pagamentos;</li>
+          <li>prestar suporte e responder solicitações;</li>
+          <li>entregar materiais, atualizações e comunicações relacionadas ao produto;</li>
+          <li>enviar comunicações promocionais quando houver consentimento, com possibilidade de cancelamento;</li>
+          <li>prevenir fraudes, compartilhamento indevido e incidentes de segurança;</li>
+          <li>cumprir obrigações legais, regulatórias e exercer direitos em processos.</li>
+        </ul>
+        <h3>4. Bases legais</h3>
+        <p>Conforme a finalidade, o tratamento poderá ocorrer para execução de contrato ou de procedimentos preliminares, cumprimento de obrigação legal ou regulatória, exercício regular de direitos, atendimento a interesses legítimos relacionados à segurança e melhoria do serviço ou mediante consentimento, quando ele for necessário.</p>
+        <h3>5. Compartilhamento e serviços externos</h3>
+        <p>Os dados podem ser compartilhados, no limite necessário, com prestadores que apoiam a operação, como hospedagem, portal de acesso, serviços de comunicação, pagamentos e vendas pela Hotmart, atendimento pelo WhatsApp e autoridades públicas quando houver obrigação legal.</p>
+        <p>O site também utiliza recursos ou links de terceiros, como Google Fonts e YouTube. Ao acessar esses serviços, o tratamento poderá ocorrer de acordo com as políticas próprias de cada fornecedor.</p>
+        <p>Alguns fornecedores podem tratar dados fora do Brasil. Nesses casos, são adotadas medidas compatíveis com a LGPD e com a natureza do serviço contratado.</p>
+        <h3>6. Cookies e tecnologias semelhantes</h3>
+        <p>Na versão atual, o site não utiliza cookies próprios de publicidade ou ferramentas próprias de rastreamento comportamental. Recursos externos necessários à exibição da página ou acessados por links podem realizar tratamentos técnicos conforme suas próprias políticas. Se novas ferramentas de análise ou publicidade forem adotadas, esta Política e os mecanismos de escolha serão atualizados quando necessário.</p>
+        <h3>7. Armazenamento e eliminação</h3>
+        <p>Os dados são mantidos somente pelo tempo necessário para cumprir as finalidades informadas, atender prazos legais e contratuais, prevenir fraudes e exercer direitos. Depois disso, serão eliminados ou anonimizados, salvo quando a conservação for permitida ou exigida por lei.</p>
+        <h3>8. Segurança</h3>
+        <p>São adotadas medidas técnicas e administrativas razoáveis para proteger os dados contra acessos não autorizados, perda, alteração, divulgação ou destruição. Nenhum sistema é completamente imune a riscos; eventuais incidentes relevantes serão tratados conforme a legislação aplicável.</p>
+        <h3>9. Seus direitos</h3>
+        <p>Nos termos da LGPD, você pode solicitar, conforme aplicável: confirmação do tratamento; acesso; correção; anonimização, bloqueio ou eliminação; portabilidade; informação sobre compartilhamentos; revisão de decisões automatizadas; oposição; revogação do consentimento e eliminação dos dados tratados com base nele, observadas as hipóteses legais de conservação.</p>
+        <p>Para proteger o titular, poderemos solicitar informações que permitam confirmar a identidade antes de atender ao pedido.</p>
+        <h3>10. Crianças e adolescentes</h3>
+        <p>Os produtos e serviços são direcionados a profissionais e estudantes e não têm como finalidade coletar intencionalmente dados de crianças. Caso um responsável identifique tratamento indevido, deverá entrar em contato para análise e adoção das medidas cabíveis.</p>
+        <h3>11. Alterações desta Política</h3>
+        <p>Esta Política poderá ser atualizada para refletir mudanças legais, técnicas ou operacionais. A versão vigente e a data da atualização permanecerão disponíveis neste site.</p>
+        <h3>12. Contato</h3>
+        <p>Dúvidas ou solicitações sobre dados pessoais podem ser enviadas para <a href="mailto:projetamais.suporte@gmail.com">projetamais.suporte@gmail.com</a> ou pelo WhatsApp <a href="https://wa.me/5548999425550" target="_blank" rel="noopener">+55 48 99942-5550</a>.</p>
+      </article>
+    </template>
+
+    <template id="legal-refund-template">
+      <article class="legal-document">
+        <p class="legal-document__updated">Política de Reembolso e Cancelamento</p>
+        <p>Esta Política regula as condições de reembolso, cancelamento e desistência aplicáveis à aquisição dos produtos digitais licenciados (“Materiais”), em conformidade com o Código de Defesa do Consumidor (Lei nº 8.078/1990).</p>
+        <p>Ao realizar a compra, o usuário declara que leu, compreendeu e concorda integralmente com esta Política.</p>
+        <h3>1. Natureza do Produto</h3>
+        <p>Os Materiais consistem em produtos digitais licenciados para uso, com acesso imediato após a confirmação do pagamento.</p>
+        <p>Por sua natureza digital e imaterial, não se tratam de bens físicos passíveis de devolução tradicional, sendo o acesso concedido mediante licença de uso, nos termos dos Termos de Uso aplicáveis.</p>
+        <h3>2. Direito de Arrependimento</h3>
+        <p>Nos termos do art. 49 do Código de Defesa do Consumidor, o usuário poderá exercer o direito de arrependimento no prazo de até 7 (sete) dias corridos, contados a partir da data da confirmação do pagamento, com direito ao reembolso integral, desde que não tenha ocorrido uso efetivo dos Materiais.</p>
+        <h3>3. Limitação do Direito de Arrependimento em Produtos Digitais</h3>
+        <p>Considerando a natureza digital, licenciada e de acesso imediato dos Materiais, o direito de arrependimento poderá ser limitado quando ficar caracterizado uso efetivo do conteúdo, incluindo, mas não se limitando às seguintes situações:</p>
+        <ul>
+          <li>ativação da licença;</li>
+          <li>utilização dos Materiais em projetos, trabalhos ou produções;</li>
+          <li>compartilhamento ou tentativa de compartilhamento, autorizado ou não;</li>
+          <li>violação dos Termos de Uso ou das restrições de licença.</li>
+        </ul>
+        <p>Nessas hipóteses, entende-se que houve consumo do produto digital, podendo o reembolso não ser aplicável, ainda que a solicitação ocorra dentro do prazo de 7 (sete) dias, observada a legislação vigente e a análise do caso concreto.</p>
+        <h3>4. Reembolso por Falha Técnica</h3>
+        <p>Poderá ser concedido reembolso excepcional quando comprovado que:</p>
+        <ul>
+          <li>os Materiais apresentam falha técnica grave que impeça completamente sua utilização;</li>
+          <li>o problema não possa ser resolvido por meio de atualização, correção ou suporte técnico;</li>
+          <li>fique demonstrado que a falha é de responsabilidade direta do fornecedor.</li>
+        </ul>
+        <h3>5. Situações que Não Geram Direito a Reembolso</h3>
+        <p>Não caracterizam motivo para reembolso:</p>
+        <ul>
+          <li>incompatibilidade com versões específicas de softwares de terceiros;</li>
+          <li>limitações do ambiente, sistema operacional, hardware ou configuração do usuário;</li>
+          <li>falta de conhecimento técnico ou operacional do usuário;</li>
+          <li>mudança de opinião após a utilização dos Materiais;</li>
+          <li>expectativas não descritas de forma objetiva na apresentação oficial do produto.</li>
+        </ul>
+        <h3>6. Procedimento para Solicitação</h3>
+        <p>A solicitação de reembolso deverá ser realizada exclusivamente por meio do canal oficial de atendimento, contendo obrigatoriamente:</p>
+        <ul>
+          <li>nome ou e-mail utilizado na compra;</li>
+          <li>número do pedido ou comprovante de pagamento;</li>
+          <li>descrição clara e objetiva da solicitação.</li>
+        </ul>
+        <p>Todas as solicitações serão analisadas individualmente.</p>
+        <h3>7. Prazo e Forma de Reembolso</h3>
+        <p>Quando aprovado, o reembolso será realizado pelo mesmo meio de pagamento utilizado na compra, dentro dos prazos operacionais da plataforma de pagamento, os quais podem variar conforme o método escolhido.</p>
+        <h3>8. Cancelamento da Licença</h3>
+        <p>Em caso de reembolso aprovado, a licença de uso será imediatamente cancelada e invalidada, ficando vedada qualquer utilização posterior dos Materiais, sob pena de infração aos Termos de Uso e à legislação aplicável.</p>
+        <h3>9. Disposições Finais</h3>
+        <p>Esta Política integra os Termos de Uso e Licença, devendo ser interpretada de forma conjunta. Em caso de conflito, prevalecerá a interpretação mais favorável ao consumidor, conforme a legislação vigente.</p>
+      </article>
+    </template>
+
+    <script src="js/main.js?v=20261016c"></script>
   </body>
 </html>
