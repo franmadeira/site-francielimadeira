@@ -33,8 +33,12 @@ document.addEventListener("DOMContentLoaded", function () {
     anotacoes: {
       group: "Grátis",
       title: "Plugin Anotações",
-      description: "Registra informações técnicas diretamente no modelo, com cálculo automático e o mesmo padrão em todos os projetos.",
-      bullets: ["Anotações inteligentes", "Mais padrão na documentação"],
+      tagline: "Do modelo 3D à documentação, sem retrabalho.",
+      description: "Crie anotações de ambientes, cortes e forros diretamente no SketchUp, com cálculo automático de áreas e personalização de fontes e escalas.",
+      bullets: [
+        "Anotações e cálculos automáticos",
+        "Documentação organizada e padronizada",
+      ],
       note: "Basta criar a conta no portal.",
       media: "image",
       src: "assets/images/anotacoes_01.png",
@@ -45,9 +49,12 @@ document.addEventListener("DOMContentLoaded", function () {
     sketchup: {
       group: "Assinatura",
       title: "SketchUp Inteligente",
-      description: "Gera cenas, plantas, cortes e detalhamentos a partir do modelo e exporta tudo em lote.",
-      bullets: ["Organização automática do modelo", "Exportação em lote"],
-      note: "Incluso nos planos Individual e Premium.",
+      tagline: "Do modelo 3D às pranchas, em poucos cliques.",
+      description: "Crie e organize cenas, plantas, cortes e detalhamentos diretamente no SketchUp, com anotações automáticas e exportação em lote para o LayOut.",
+      bullets: [
+        "Cenas e detalhamentos inteligentes",
+        "Organização e exportação em lote",
+      ],
       media: "image",
       src: "assets/images/skt_inteligente_01.png",
       alt: "SketchUp Inteligente organizando cenas e vistas do projeto",
@@ -57,23 +64,30 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     tecnicos: {
       group: "Assinatura",
+      badges: ["Somente no plano Premium"],
       title: "Pontos Técnicos e Iluminação",
-      description: "Organiza elétrica, hidráulica e iluminação com blocos dinâmicos e relatórios gerados automaticamente.",
-      bullets: ["Edição em lote das informações", "Relatórios sem digitação"],
-      note: "Incluso nos planos Individual e Premium.",
+      tagline: "Mais agilidade e precisão nos projetos técnicos.",
+      description: "Insira e configure pontos elétricos, hidráulicos e de iluminação diretamente no SketchUp, com blocos dinâmicos, edição em lote e relatórios automáticos.",
+      bullets: [
+        "Configuração e edição em lote",
+        "Quantitativos e relatórios automáticos",
+      ],
       media: "video",
       src: "assets/images/video-tec-completo.mp4",
       alt: "Demonstração do plugin Pontos Técnicos e Iluminação",
-      cta: "Experimentar 15 dias",
-      href: "https://app.francielimadeira.com",
+      cta: "Ver plano Premium",
+      href: "#planos",
       lesson: "https://youtube.com/playlist?list=PLINQE5LCTA2MVn0ulZzURq9lT7gS5yp7V",
     },
     layout: {
       group: "Assinatura",
       title: "Layout Inteligente",
-      description: "Leva o projeto do 3D para o LayOut com escala e estrutura de prancha definidas.",
-      bullets: ["Criação de pranchas", "Detalhamento técnico mais rápido"],
-      note: "Disponível no plano Premium.",
+      tagline: "Do SketchUp ao LayOut, com pranchas organizadas em poucos cliques.",
+      description: "Automatize a criação de pranchas, organize as vistas e configure escalas e folhas para agilizar a documentação técnica dos seus projetos.",
+      bullets: [
+        "Pranchas e vistas organizadas automaticamente",
+        "Escalas e folhas configuráveis",
+      ],
       media: "video",
       src: "assets/images/video-layout-completo.mp4",
       alt: "Demonstração do plugin Layout Inteligente",
@@ -83,9 +97,12 @@ document.addEventListener("DOMContentLoaded", function () {
     esquadrias: {
       group: "Assinatura",
       title: "Plugin Esquadrias",
-      description: "Crie e organize portas, janelas e esquadrias integradas ao modelo, com mais agilidade e padrão no projeto.",
-      bullets: ["Modelagem organizada de esquadrias", "Informações integradas ao projeto"],
-      note: "Incluso nos planos Individual e Premium.",
+      tagline: "Portas e janelas personalizadas, diretamente no seu modelo 3D.",
+      description: "Crie e configure portas, janelas e portas-janelas no SketchUp, com ajustes de dimensões, modelos e componentes para diferentes necessidades do projeto.",
+      bullets: [
+        "Modelagem e configuração de esquadrias",
+        "Personalização de modelos e dimensões",
+      ],
       media: "image",
       src: "assets/images/skt_inteligente_02.png",
       alt: "Projeto no SketchUp com portas, janelas e esquadrias organizadas",
@@ -94,21 +111,30 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     marcenaria: {
       group: "Assinatura",
+      badges: ["Somente no plano Premium", "Em breve"],
       title: "Plugin Marcenaria",
-      description: "Modele e detalhe marcenaria com ferramentas integradas ao seu fluxo no SketchUp.",
-      bullets: ["Modelagem de marcenaria mais ágil", "Detalhamento integrado ao projeto"],
-      note: "Incluso nos planos Individual e Premium.",
+      tagline: "Da modelagem ao detalhamento, marcenaria em poucos cliques.",
+      description: "Crie e personalize projetos de marcenaria diretamente no SketchUp, com ferramentas para configurar caixarias, portas, gavetas e componentes.",
+      bullets: [
+        "Modelagem e personalização de marcenaria",
+        "Detalhamento técnico mais ágil",
+      ],
+      note: "Em breve, exclusivo do plano Premium.",
       media: "image",
       src: "assets/images/skt_inteligente_03.png",
       alt: "Projeto de marcenaria detalhado no SketchUp",
-      cta: "Experimentar 15 dias",
-      href: "https://app.francielimadeira.com",
+      cta: "Ver plano Premium",
+      href: "#planos",
     },
     notion: {
       group: "Avulso",
       title: "Template Notion",
-      description: "Projetos, tarefas e prazos do escritório reunidos em um só template, com rotina de acompanhamento pronta.",
-      bullets: ["Gestão completa de projetos", "Rotina estruturada"],
+      tagline: "Toda a gestão do escritório em um só lugar.",
+      description: "Organize projetos, tarefas e prazos em um template pronto para acompanhar as atividades e facilitar a rotina do escritório.",
+      bullets: [
+        "Projetos e tarefas centralizados",
+        "Prazos e atividades organizados",
+      ],
       note: "Compra única, separada da assinatura.",
       media: "image",
       src: "assets/icons/notion.png",
@@ -136,16 +162,37 @@ document.addEventListener("DOMContentLoaded", function () {
     const lessonLink = data.lesson
       ? `<a class="btn btn-secondary" href="${data.lesson}" target="_blank" rel="noopener">Assistir aula</a>`
       : "";
+    const primaryLinkTarget = data.href.startsWith("#")
+      ? ""
+      : ' target="_blank" rel="noopener"';
+    const additionalChips = (data.badges || [])
+      .map((badge) => {
+        const modifier = badge === "Em breve"
+          ? " plugin-demo-chip--soon"
+          : " plugin-demo-chip--premium";
+        return `<span class="plugin-demo-chip${modifier}">${badge}</span>`;
+      })
+      .join("");
+    const tagline = data.tagline
+      ? `<p class="plugin-demo-tagline">${data.tagline}</p>`
+      : "";
+    const note = data.note
+      ? `<p class="plugin-demo-note">${data.note}</p>`
+      : "";
 
     pluginDemoResult.innerHTML = `
       <div class="plugin-demo-media">${mediaMarkup}</div>
-      <span class="plugin-demo-chip">${data.group}</span>
+      <div class="plugin-demo-chips">
+        <span class="plugin-demo-chip">${data.group}</span>
+        ${additionalChips}
+      </div>
       <h3>${data.title}</h3>
+      ${tagline}
       <p>${data.description}</p>
       <ul>${data.bullets.map((item) => `<li>${item}</li>`).join("")}</ul>
-      <p class="plugin-demo-note">${data.note}</p>
+      ${note}
       <div class="plugin-demo-actions">
-        <a class="btn btn-primary" href="${data.href}" target="_blank" rel="noopener">${data.cta}</a>
+        <a class="btn btn-primary" href="${data.href}"${primaryLinkTarget}>${data.cta}</a>
         ${lessonLink}
       </div>`;
 
