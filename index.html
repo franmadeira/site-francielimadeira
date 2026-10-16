@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css?v=20260213c" />
+    <link rel="stylesheet" href="css/style.css?v=20260424a" />
   </head>
   <body>
     <header>
@@ -27,6 +27,7 @@
           <li><a href="#home">Início</a></li>
           <li><a href="#funcionalidades">Funcionalidades</a></li>
           <li><a href="#plugins">Recursos</a></li>
+          <li><a href="#planos">Planos</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
@@ -44,6 +45,10 @@
     <!-- Hero Section - Slim Design -->
     <section class="hero" id="home">
       <div class="container hero-content">
+        <div class="hero-proof-single" aria-label="Indicador de credibilidade">
+          <strong>+1.500</strong>
+          <span>produtos vendidos</span>
+        </div>
         <h1 class="hero-title">
           Seu projeto no SketchUp, mais inteligente e muito mais rápido.
         </h1>
@@ -61,6 +66,7 @@
           >
             Começar grátis
           </a>
+          <a href="#plugins" class="btn btn-secondary">Ver como funciona</a>
         </div>
       </div>
     </section>
@@ -114,20 +120,27 @@
     <section class="process-highlight" aria-label="Impacto de produtividade">
       <div class="container">
         <article class="process-highlight-card">
-          <h2>
-            Processos que antes levavam horas passam a ser feitos em minutos.
-          </h2>
-          <p>
-            Em vez de ajustes manuais em cada projeto, você trabalha com
-            processos inteligentes que aceleram etapas críticas e reduzem erros.
-          </p>
+          <div class="process-highlight-copy">
+            <h2>
+              Processos que antes levavam horas passam a ser feitos em minutos.
+            </h2>
+            <p>
+              Em vez de ajustes manuais em cada projeto, você trabalha com
+              processos inteligentes que aceleram etapas críticas e reduzem
+              erros.
+            </p>
+          </div>
           <div class="process-highlight-metrics">
             <div class="process-metric">
-              <strong>80%</strong>
+              <strong class="js-countup" data-target="80" data-suffix="%"
+                >0%</strong
+              >
               <span>menos tarefas manuais</span>
             </div>
             <div class="process-metric">
-              <strong>3x</strong>
+              <strong class="js-countup" data-target="3" data-suffix="x"
+                >0x</strong
+              >
               <span>mais velocidade nas entregas</span>
             </div>
           </div>
@@ -149,6 +162,7 @@
         </p>
         <div class="features-grid">
           <div class="feature-card">
+            <span class="feature-number">01</span>
             <div class="feature-icon">
               <img
                 src="assets/icons/settings.png"
@@ -158,11 +172,12 @@
             </div>
             <h3>Automatização</h3>
             <p>
-              Crie seu projeto e automatize seu projeto executivo, eliminando
-              tarefas repetitivas e manuais.
+              Crie e entregue projetos executivos eliminando tarefas
+              repetitivas.
             </p>
           </div>
           <div class="feature-card">
+            <span class="feature-number">02</span>
             <div class="feature-icon">
               <img
                 src="assets/icons/speed.png"
@@ -176,6 +191,7 @@
             </p>
           </div>
           <div class="feature-card">
+            <span class="feature-number">03</span>
             <div class="feature-icon">
               <img
                 src="assets/icons/planning.png"
@@ -184,535 +200,444 @@
               />
             </div>
             <h3>Experiência de Uso</h3>
-            <p>Pensado para ser simples, rápido e agradável de usar.</p>
+            <p>
+              Fluxo simples, rápido e agradável para quem precisa produzir sem
+              travar.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Plugins Section -->
-    <section class="plugins" id="plugins">
+    <section class="plugins recursos-bg" id="plugins">
       <div class="container">
         <p class="section-label">PLUGINS, BIBLIOTECAS E TEMPLATES</p>
         <h2>Nossos Recursos</h2>
-        <p class="plugins-info">
-          Não são apenas plugins, bibliotecas e templates avulsos, mas soluções
-          que estruturam seu fluxo de trabalho e fortalecem a organização do seu
-          escritório.
+        <p class="plugins-lead">
+          Não são apenas <span class="destaque">ferramentas</span>. São
+          <span class="destaque">soluções</span> que estruturam seu processo,
+          reduzem retrabalho e trazem mais
+          <span class="destaque">organização</span> para o seu dia a dia.
         </p>
-        <div class="plugins-carousel" aria-label="Carrossel de produtos">
-          <button
-            class="plugin-carousel-btn prev"
-            type="button"
-            aria-label="Ver produtos anteriores"
-          >
-            <img
-              src="assets/icons/left.svg"
-              alt=""
-              class="nav-icon"
-              aria-hidden="true"
-            />
-          </button>
-          <div class="plugins-track" tabindex="0">
-            <div class="plugins-grid">
-              <div class="plugin-card" data-product="scripts">
-                <div class="plugin-icon">
-                  <img
-                    src="assets/icons/script.png"
-                    alt="Scripts"
-                    class="feature-icon-img"
-                  />
-                </div>
-                <h3>PLUGIN SCRIPTS</h3>
-                <span class="badge badge-free">FREE</span>
-              </div>
-              <div class="plugin-card" data-product="anotacoes">
-                <div class="plugin-icon">
-                  <img
-                    src="assets/icons/note.png"
-                    alt="Anotações"
-                    class="feature-icon-img"
-                  />
-                </div>
-                <h3>PLUGIN ANOTAÇÕES</h3>
-                <span class="badge badge-free">FREE</span>
-              </div>
-              <div class="plugin-card" data-product="inteligente">
-                <div class="plugin-icon">
-                  <img
-                    src="assets/icons/stkinteli.png"
-                    alt="SketchUp Inteligente"
-                    class="feature-icon-img"
-                  />
-                </div>
-                <h3>PLUGIN SKETCHUP INTELIGENTE</h3>
-                <span class="badge badge-paid">DISPONÍVEL</span>
-              </div>
 
-              <div class="plugin-card" data-product="dinamicos">
-                <div class="plugin-icon">
-                  <img
-                    src="assets/icons/dinamic.png"
-                    alt="Blocos Dinâmicos"
-                    class="feature-icon-img"
-                  />
-                </div>
-                <h3>PLUGIN PONTOS TÉCNICOS E ILUMINAÇÃO</h3>
-                <span class="badge badge-paid">DISPONÍVEL</span>
+        <div class="resources-list" aria-label="Lista de recursos do Projeta+">
+          <article class="resource-item">
+            <div class="resource-media">
+              <img src="assets/images/scripts_01.png" alt="Plugin Utilidades" />
+            </div>
+            <div class="resource-copy">
+              <div class="resource-meta">
+                <span class="resource-tag resource-tag--free">Grátis</span>
+                <span class="resource-tag resource-tag--type">Plugin</span>
               </div>
-
-              <div class="plugin-card" data-product="layout">
-                <div class="plugin-icon">
-                  <img
-                    src="assets/icons/layout.png"
-                    alt="Layout Inteligente"
-                    class="feature-icon-img"
-                  />
-                </div>
-                <h3>PLUGIN LAYOUT INTELIGENTE</h3>
-                <span class="badge badge-paid">EM BREVE</span>
-              </div>
-
-              <div class="plugin-card" data-product="marcenaria">
-                <div class="plugin-icon">
-                  <img
-                    src="assets/icons/marcenaria.png"
-                    alt="Marcenaria Dinâmica"
-                    class="feature-icon-img"
-                  />
-                </div>
-                <h3>BIBLIOTECA MARCENARIA DINÂMICA</h3>
-                <span class="badge badge-paid">DISPONÍVEL</span>
-              </div>
-
-              <div class="plugin-card" data-product="template-notion">
-                <div class="plugin-icon">
-                  <img
-                    src="assets/icons/notion.png"
-                    alt="Template Notion"
-                    class="feature-icon-img"
-                  />
-                </div>
-                <h3>TEMPLATE NOTION</h3>
-                <span class="badge badge-paid">DISPONÍVEL</span>
+              <h3>Plugin Utilidades</h3>
+              <p>
+                Automatize tarefas repetitivas e ganhe velocidade no seu fluxo
+                dentro do SketchUp.
+              </p>
+              <ul class="resource-items">
+                <li>Execute ações operacionais com poucos cliques</li>
+                <li>Elimine tarefas manuais que tomam tempo no dia a dia</li>
+              </ul>
+              <div class="resource-actions">
+                <a
+                  href="https://app.francielimadeira.com"
+                  class="btn-r btn-r--primary"
+                  target="_blank"
+                  rel="noopener"
+                  >Usar gratuitamente</a
+                >
               </div>
             </div>
-          </div>
-          <button
-            class="plugin-carousel-btn next"
-            type="button"
-            aria-label="Ver próximos produtos"
-          >
-            <img
-              src="assets/icons/right.svg"
-              alt=""
-              class="nav-icon"
-              aria-hidden="true"
-            />
-          </button>
+          </article>
+
+          <article class="resource-item">
+            <div class="resource-media">
+              <img
+                src="assets/images/anotacoes_01.png"
+                alt="Plugin Anotações"
+              />
+            </div>
+            <div class="resource-copy">
+              <div class="resource-meta">
+                <span class="resource-tag resource-tag--free">Grátis</span>
+                <span class="resource-tag resource-tag--type">Plugin</span>
+              </div>
+              <h3>Plugin Anotações</h3>
+              <p>
+                Organize informações técnicas diretamente no modelo, com mais
+                clareza e menos retrabalho.
+              </p>
+              <ul class="resource-items">
+                <li>Anotações inteligentes com cálculo automático</li>
+                <li>Mais padrão e consistência na documentação</li>
+              </ul>
+              <div class="resource-actions">
+                <a
+                  href="https://app.francielimadeira.com"
+                  class="btn-r btn-r--primary"
+                  target="_blank"
+                  rel="noopener"
+                  >Usar gratuitamente</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="resource-item">
+            <div class="resource-media">
+              <video
+                src="assets/images/video-skt-completo.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                aria-label="Demonstração do Plugin SketchUp Inteligente"
+              ></video>
+              <span class="media-play-hint">Demo</span>
+            </div>
+            <div class="resource-copy">
+              <div class="resource-meta">
+                <span class="resource-tag resource-tag--plan"
+                  >Individual ou Premium</span
+                >
+                <span class="resource-tag resource-tag--type">Plugin</span>
+              </div>
+              <h3>Plugin SketchUp Inteligente</h3>
+              <p>
+                Automatize seu processo e produza projetos com muito mais
+                velocidade e padrão.
+              </p>
+              <ul class="resource-items">
+                <li>
+                  Geração automática de cenas, plantas, cortes e detalhamentos
+                </li>
+                <li>Organização do modelo e exportações em lote</li>
+              </ul>
+              <div class="resource-actions">
+                <a
+                  href="https://youtube.com/playlist?list=PLINQE5LCTA2MVn0ulZzURq9lT7gS5yp7V"
+                  class="btn-r btn-r--ghost"
+                  target="_blank"
+                  rel="noopener"
+                  >Assistir aulas</a
+                >
+                <a
+                  href="https://app.francielimadeira.com"
+                  class="btn-r btn-r--primary"
+                  target="_blank"
+                  rel="noopener"
+                  >Experimentar 7 dias</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="resource-item">
+            <div class="resource-media">
+              <video
+                src="assets/images/video-tec-completo.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                aria-label="Demonstração do Plugin Pontos Técnicos e Iluminação"
+              ></video>
+              <span class="media-play-hint">Demo</span>
+            </div>
+            <div class="resource-copy">
+              <div class="resource-meta">
+                <span class="resource-tag resource-tag--plan"
+                  >Individual ou Premium</span
+                >
+                <span class="resource-tag resource-tag--type">Plugin</span>
+              </div>
+              <h3>Pontos Técnicos e Iluminação</h3>
+              <p>
+                Tenha um projeto técnico completo com mais rapidez, padronização
+                e controle.
+              </p>
+              <ul class="resource-items">
+                <li>Blocos dinâmicos para elétrica, hidráulica e iluminação</li>
+                <li>Relatórios automáticos e edição em lote de informações</li>
+              </ul>
+              <div class="resource-actions">
+                <a
+                  href="https://youtube.com/playlist?list=PLINQE5LCTA2MVn0ulZzURq9lT7gS5yp7V"
+                  class="btn-r btn-r--ghost"
+                  target="_blank"
+                  rel="noopener"
+                  >Assistir tutoriais</a
+                >
+                <a
+                  href="https://app.francielimadeira.com"
+                  class="btn-r btn-r--primary"
+                  target="_blank"
+                  rel="noopener"
+                  >Assinar agora</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="resource-item">
+            <div class="resource-media">
+              <video
+                src="assets/images/video-layout-completo.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                aria-label="Demonstração do Plugin Layout Inteligente"
+              ></video>
+              <span class="media-play-hint">Demo</span>
+            </div>
+            <div class="resource-copy">
+              <div class="resource-meta">
+                <span class="resource-tag resource-tag--plan">Premium</span>
+                <span class="resource-tag resource-tag--type">Plugin</span>
+              </div>
+              <h3>Plugin Layout Inteligente</h3>
+              <p>
+                Leve seus projetos do 3D para o Layout com mais organização e
+                precisão.
+              </p>
+              <ul class="resource-items">
+                <li>Criação de pranchas com escala e estrutura padronizada</li>
+                <li>Fluxo mais eficiente para detalhamento técnico</li>
+              </ul>
+              <div class="resource-actions">
+                <a
+                  href="https://app.francielimadeira.com"
+                  class="btn-r btn-r--primary"
+                  target="_blank"
+                  rel="noopener"
+                  >Começar a usar</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="resource-item">
+            <div class="resource-media">
+              <img
+                src="assets/icons/marcenaria.png"
+                alt="Biblioteca Marcenaria Dinâmica"
+              />
+            </div>
+            <div class="resource-copy">
+              <div class="resource-meta">
+                <span class="resource-tag resource-tag--avulso">Avulso</span>
+                <span class="resource-tag resource-tag--type">Biblioteca</span>
+              </div>
+              <h3>Biblioteca Marcenaria Dinâmica</h3>
+              <p>
+                Modele marcenaria com mais rapidez, precisão e padronização no
+                SketchUp.
+              </p>
+              <ul class="resource-items">
+                <li>Componentes dinâmicos prontos para uso</li>
+                <li>Ajustes rápidos sem refazer o modelo</li>
+              </ul>
+              <div class="resource-actions">
+                <a
+                  href="https://youtu.be/JhfEZkgFF-E"
+                  class="btn-r btn-r--ghost"
+                  target="_blank"
+                  rel="noopener"
+                  >Assistir aula</a
+                >
+                <a
+                  href="https://go.hotmart.com/T94960778T?dp=1"
+                  class="btn-r btn-r--primary"
+                  target="_blank"
+                  rel="noopener"
+                  >Comprar</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="resource-item">
+            <div class="resource-media">
+              <img src="assets/icons/notion.png" alt="Template Notion" />
+            </div>
+            <div class="resource-copy">
+              <div class="resource-meta">
+                <span class="resource-tag resource-tag--avulso">Avulso</span>
+                <span class="resource-tag resource-tag--type">Template</span>
+              </div>
+              <h3>Template Notion</h3>
+              <p>
+                Organize seu escritório e seus projetos em um só lugar, com mais
+                clareza e controle.
+              </p>
+              <ul class="resource-items">
+                <li>Gestão completa de projetos, tarefas e prazos</li>
+                <li>Rotina estruturada para acompanhamento e organização</li>
+              </ul>
+              <div class="resource-actions">
+                <a
+                  href="https://youtu.be/ZDjPR-IKoL0"
+                  class="btn-r btn-r--ghost"
+                  target="_blank"
+                  rel="noopener"
+                  >Assistir aula</a
+                >
+                <a
+                  href="https://go.hotmart.com/N54776543T?dp=1"
+                  class="btn-r btn-r--primary"
+                  target="_blank"
+                  rel="noopener"
+                  >Comprar</a
+                >
+              </div>
+            </div>
+          </article>
         </div>
-        <!-- Carousel Inside Plugins Section -->
-        <div class="carousel-wrapper">
-          <div class="carousel-content">
-            <div class="carousel-slide" data-content="scripts">
-              <div class="carousel-slide-inner">
-                <div class="carousel-text">
-                  <h3>Scripts</h3>
-                  <p>
-                    Plugin para Sketchup com scripts personalizados para
-                    automatizar tarefas repetitivas no SketchUp.
-                  </p>
-                  <ul>
-                    <li>
-                      Remover materiais, linhas e faces de objetos selecionados.
-                    </li>
-                    <li>Girar objetos no eixo Z com atalho rápido.</li>
-                    <li>Ocultar linhas de fachadas.</li>
-                    <li>
-                      Ocultar portas com apenas um comando simples e
-                      personalizado.
-                    </li>
-                  </ul>
-                  <p>
-                    Economize horas por projeto e aumente sua produtividade sem
-                    aumentar sua carga mental.
-                  </p>
-                  <div class="cta-buttons">
-                    <a
-                      href="https://app.francielimadeira.com"
-                      class="btn btn-primary"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Usar gratuitamente agora
-                    </a>
-                  </div>
-                </div>
-                <div class="carousel-images">
-                  <div class="image-slide active">
-                    <img
-                      src="assets/images/scripts_01.png"
-                      alt="Scripts - Print 1"
-                    />
-                  </div>
-                  <button class="image-nav-btn prev">
-                    <img
-                      src="assets/icons/left.svg"
-                      alt=""
-                      class="nav-icon"
-                      aria-hidden="true"
-                    />
-                  </button>
-                  <button class="image-nav-btn next">
-                    <img
-                      src="assets/icons/right.svg"
-                      alt=""
-                      class="nav-icon"
-                      aria-hidden="true"
-                    />
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-slide" data-content="anotacoes">
-              <div class="carousel-slide-inner">
-                <div class="carousel-text">
-                  <h3>Anotações</h3>
-                  <p>
-                    Plugin para Sketchup que adiciona anotações com cálculo
-                    automático aos seus projetos diretamente no 3D.
-                  </p>
-                  <ul>
-                    <li>Anotações de Ambiente e Área</li>
-                    <li>Pé direito e Nível</li>
-                    <li>Seções e Vistas</li>
-                    <li>Anotações de forro</li>
-                  </ul>
-                  <div class="cta-buttons">
-                    <a
-                      href="https://app.francielimadeira.com"
-                      class="btn btn-primary"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Quero experimentar grátis
-                    </a>
-                  </div>
-                </div>
-                <div class="carousel-images">
-                  <div class="image-slide active">
-                    <img
-                      src="assets/images/anotacoes_01.png"
-                      alt="Anotações - Print 1"
-                    />
-                  </div>
-                  <div class="image-slide">
-                    <img
-                      src="assets/images/anotacoes_02.png"
-                      alt="Anotações - Print 2"
-                    />
-                  </div>
-                  <button class="image-nav-btn prev">
-                    <img
-                      src="assets/icons/left.svg"
-                      alt=""
-                      class="nav-icon"
-                      aria-hidden="true"
-                    />
-                  </button>
-                  <button class="image-nav-btn next">
-                    <img
-                      src="assets/icons/right.svg"
-                      alt=""
-                      class="nav-icon"
-                      aria-hidden="true"
-                    />
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-slide active" data-content="inteligente">
-              <div class="carousel-slide-inner">
-                <div class="carousel-text">
-                  <h3>SketchUp Inteligente</h3>
-                  <p>
-                    Plugin para Sketchup com um conjunto de ferramentas pensadas
-                    para transformar seu processo em algo mais rápido,
-                    padronizado e inteligente.
-                  </p>
-                  <ul>
-                    <li>
-                      Geração automática de cenas, plantas, seções, fachadas e
-                      detalhamentos.
-                    </li>
-                    <li>Gerenciamente de níveis de projeto.</li>
-                    <li>
-                      Exportação em lote de imagens com configurações
-                      personalizadas.
-                    </li>
-                    <li>Importação e gerenciamento de etiquetas.</li>
-                  </ul>
 
-                  <div class="cta-buttons">
-                    <a
-                      href="https://youtube.com/playlist?list=PLINQE5LCTA2MVn0ulZzURq9lT7gS5yp7V&si=noHAimJWZV__dpHf"
-                      class="btn btn-primary"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Assistir Aulas
-                    </a>
+        <p class="resources-note">
+          Plugins gratuitos disponíveis no portal · Recursos avulsos via Hotmart
+        </p>
+      </div>
+    </section>
 
-                    <a
-                      href="https://app.francielimadeira.com"
-                      class="btn btn-primary"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Experimentar 7 dias agora
-                    </a>
-                  </div>
-                </div>
-                <div class="carousel-images">
-                  <div class="image-slide active">
-                    <img
-                      src="assets/images/skt_inteligente_02.png"
-                      alt="SketchUp Inteligente - Print 1"
-                    />
-                  </div>
-                  <div class="image-slide">
-                    <img
-                      src="assets/images/skt_inteligente_03.png"
-                      alt="SketchUp Inteligente - Print 2"
-                    />
-                  </div>
-                  <div class="image-slide">
-                    <img
-                      src="assets/images/skt_inteligente_04.png"
-                      alt="SketchUp Inteligente - Print 3"
-                    />
-                  </div>
-                  <div class="image-slide">
-                    <img
-                      src="assets/images/skt_inteligente_05.png"
-                      alt="SketchUp Inteligente - Print 4"
-                    />
-                  </div>
-                  <button class="image-nav-btn prev">
-                    <img
-                      src="assets/icons/left.svg"
-                      alt=""
-                      class="nav-icon"
-                      aria-hidden="true"
-                    />
-                  </button>
-                  <button class="image-nav-btn next">
-                    <img
-                      src="assets/icons/right.svg"
-                      alt=""
-                      class="nav-icon"
-                      aria-hidden="true"
-                    />
-                  </button>
-                </div>
-              </div>
+    <section class="plans" id="planos">
+      <div class="container">
+        <div class="plans-header">
+          <p class="section-label">PLANOS</p>
+          <h2>Escolha o plano ideal para sua rotina</h2>
+          <p class="plans-lead">
+            Faça login para assinar diretamente no portal. Todos os planos
+            ativam a licença por máquina.
+            <strong>Compatível com SketchUp 2024 ou superior.</strong>
+          </p>
+        </div>
+
+        <div class="plans-grid" aria-label="Planos de assinatura do Projeta+">
+          <article class="plan-card">
+            <p class="plan-name">Licença: SketchUp Inteligente</p>
+            <p class="plan-price">
+              R$ 159<span class="plan-price-suffix">,90</span>
+            </p>
+            <p class="plan-period">
+              365 dias de acesso · no cartão · sem renovação automática · ≈ R$
+              0,44 por dia
+            </p>
+
+            <p class="plan-section-label">Plugins incluídos</p>
+            <ul class="plan-list">
+              <li>Anotações</li>
+              <li>Utilidades</li>
+              <li>SketchUp Inteligente</li>
+              <li class="off">Pontos Técnicos e Iluminação</li>
+              <li class="off">Layout Inteligente</li>
+            </ul>
+
+            <div class="plan-spacer"></div>
+            <div class="plan-card-footer">
+              <span>Uso em até 2 máquinas</span>
+              <span>Automação de tarefas repetitivas</span>
+              <span>Padronização de processos</span>
             </div>
-            <div class="carousel-slide" data-content="dinamicos">
-              <div class="carousel-slide-inner">
-                <div class="carousel-text">
-                  <h3>Pontos Técnicos e Iluminação</h3>
-                  <p>
-                    Plugin para Sketchup com bibliotecas de componentes,
-                    otimizados para detalhamento no Layout.
-                  </p>
-                  <ul>
-                    <li>
-                      Blocos de pontos técnicos: elétricos, hidrossanitários,
-                      comunicação, lógica e outros.
-                    </li>
-                    <li>
-                      Blocos de iluminação: spots, perfis, trilhos, downlights,
-                      marcenaria e outros.
-                    </li>
-                    <li>Blocos de rodapés.</li>
-                    <li>Trocar atributos em lote.</li>
-                    <li>Relatórios personalizados.</li>
-                  </ul>
+          </article>
 
-                  <div class="cta-buttons">
-                    <a
-                      href="https://youtube.com/playlist?list=PLINQE5LCTA2MVn0ulZzURq9lT7gS5yp7V&si=noHAimJWZV__dpHf"
-                      class="btn btn-primary"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Assistir Agora
-                    </a>
+          <article class="plan-card">
+            <p class="plan-name">Licença: Pontos Técnicos + Iluminação</p>
+            <p class="plan-price">
+              R$ 159<span class="plan-price-suffix">,90</span>
+            </p>
+            <p class="plan-period">
+              365 dias de acesso · no cartão · sem renovação automática · ≈ R$
+              0,44 por dia
+            </p>
 
-                    <a
-                      href="https://app.francielimadeira.com"
-                      class="btn btn-primary"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Comprar Agora
-                    </a>
-                  </div>
-                </div>
-                <!-- <div class="carousel-images">
-                  <div class="image-slide active">
-                    <img
-                      src="assets/images/screenshot1.png"
-                      alt="Blocos Dinâmicos - Print 1"
-                    />
-                  </div>
-                  <div class="image-slide">
-                    <img
-                      src="assets/images/screenshot2.png"
-                      alt="Blocos Dinâmicos - Print 2"
-                    />
-                  </div>
-                  <div class="image-slide">
-                    <img
-                      src="assets/images/screenshot3.png"
-                      alt="Blocos Dinâmicos - Print 3"
-                    />
-                  </div>
-                  <button class="image-nav-btn prev">
-                    <img src="assets/icons/left.svg" alt="" class="nav-icon" aria-hidden="true" />
-                  </button>
-                  <button class="image-nav-btn next">
-                    <img src="assets/icons/right.svg" alt="" class="nav-icon" aria-hidden="true" />
-                  </button>
-                </div> -->
-              </div>
+            <p class="plan-section-label">Plugins incluídos</p>
+            <ul class="plan-list">
+              <li>Anotações</li>
+              <li>Utilidades</li>
+              <li>Pontos Técnicos e Iluminação</li>
+              <li class="off">SketchUp Inteligente</li>
+              <li class="off">Layout Inteligente</li>
+            </ul>
+
+            <div class="plan-spacer"></div>
+            <div class="plan-card-footer">
+              <span>Uso em até 2 máquinas</span>
+              <span>Blocos dinâmicos completos</span>
+              <span>Relatórios automáticos</span>
             </div>
-            <div class="carousel-slide" data-content="layout">
-              <div class="carousel-slide-inner">
-                <div class="carousel-text">
-                  <h3>Layout Inteligente</h3>
-                  <p>
-                    Plugin para Sketchup que envia seu projeto 3D para o Layout.
-                  </p>
-                  <ul>
-                    <li>Criação automática de cenas em escala no layout.</li>
-                    <li>Exportação em lote para suas pranchas padrões.</li>
-                    <li>Scrapbooks para detalhamento de projetos.</li>
-                  </ul>
-                </div>
-                <!-- <div class="carousel-images">
-                  <div class="image-slide active">
-                    <img
-                      src="assets/images/screenshot1.png"
-                      alt="Layout Inteligente - Print 1"
-                    />
-                  </div>
-                  <div class="image-slide">
-                    <img
-                      src="assets/images/screenshot2.png"
-                      alt="Layout Inteligente - Print 2"
-                    />
-                  </div>
-                  <div class="image-slide">
-                    <img
-                      src="assets/images/screenshot3.png"
-                      alt="Layout Inteligente - Print 3"
-                    />
-                  </div>
-                  <button class="image-nav-btn prev">
-                    <img src="assets/icons/left.svg" alt="" class="nav-icon" aria-hidden="true" />
-                  </button>
-                  <button class="image-nav-btn next">
-                    <img src="assets/icons/right.svg" alt="" class="nav-icon" aria-hidden="true" />
-                  </button>
-                </div> -->
-              </div>
-            </div>
-            <div class="carousel-slide" data-content="marcenaria">
-              <div class="carousel-slide-inner">
-                <div class="carousel-text">
-                  <h3>Biblioteca Marcenaria Dinâmica</h3>
-                  <p>
-                    Bibliotecas de componentes dinâmicos que otimizam seu tempo
-                    e garantem precisão para um detalhamento no Layout.
-                  </p>
-                  <ul>
-                    <li>
-                      Blocos de caixarias, modulos de roupeiros, divisórias e
-                      outros.
-                    </li>
-                    <li>
-                      Blocos de frentes: que se tornam portas de giro,
-                      basculantes ou gavetas conforme o necessário.
-                    </li>
-                    <li>Mais de 30 modelos de puxadores.</li>
-                    <li>
-                      Possibilidade de personalização das frentes, com vidro,
-                      palhinha e almofadados.
-                    </li>
-                  </ul>
-                  <div class="cta-buttons">
-                    <a
-                      href="https://youtu.be/JhfEZkgFF-E?si=l4cNItg206-1Q1p7"
-                      class="btn btn-primary"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Assistir Aula
-                    </a>
+          </article>
 
-                    <a
-                      href="https://go.hotmart.com/T94960778T?dp=1"
-                      class="btn btn-primary"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Comprar Agora
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <article class="plan-card">
+            <p class="plan-name">Plano Mensal</p>
+            <p class="plan-price">
+              R$ 49<span class="plan-price-suffix">,99</span>
+            </p>
+            <p class="plan-period">
+              30 dias de acesso · no cartão · sem renovação automática · ≈ R$
+              1,67 por dia
+            </p>
 
-            <div class="carousel-slide" data-content="template-notion">
-              <div class="carousel-slide-inner">
-                <div class="carousel-text">
-                  <h3>Template Notion</h3>
-                  <p>
-                    Template para o aplicativo Notion para organizar seu
-                    escritório de forma eficiente e prática.
-                  </p>
-                  <ul>
-                    <li>Organização de projetos.</li>
-                    <li>Controle de tarefas e prazos.</li>
-                    <li>Planejamento semanal e mensal.</li>
-                    <li>Acompanhamento de etapas de projeto.</li>
-                    <li>Registros de pagamentos dos clientes.</li>
-                    <li>Fluxo de caixa</li>
-                  </ul>
-                  <div class="cta-buttons">
-                    <a
-                      href="https://youtu.be/ZDjPR-IKoL0?si=yZsxgWJ5g5SZuewV"
-                      class="btn btn-primary"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Assistir Aula
-                    </a>
+            <p class="plan-section-label">Plugins incluídos</p>
+            <ul class="plan-list">
+              <li>Anotações</li>
+              <li>Utilidades</li>
+              <li>SketchUp Inteligente</li>
+              <li class="off">Pontos Técnicos e Iluminação</li>
+              <li class="off">Layout Inteligente</li>
+            </ul>
 
-                    <a
-                      href="https://go.hotmart.com/N54776543T?dp=1"
-                      class="btn btn-primary"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Comprar Agora
-                    </a>
-                  </div>
-                </div>
-              </div>
+            <div class="plan-spacer"></div>
+            <div class="plan-card-footer">
+              <span>Uso em 1 máquina</span>
+              <span>Ideal para testar o sistema</span>
+              <span>Integração com seu fluxo</span>
             </div>
-          </div>
+          </article>
+
+          <article class="plan-card plan-card-popular">
+            <div class="plan-popular-badge">MAIS COMPLETO</div>
+            <p class="plan-name">Plano Premium</p>
+            <p class="plan-price">
+              R$ 299<span class="plan-price-suffix">,90</span>
+            </p>
+            <p class="plan-period">
+              365 dias de acesso · no cartão · sem renovação automática · ≈ R$
+              0,82 por dia
+            </p>
+
+            <p class="plan-section-label">Plugins incluídos</p>
+            <ul class="plan-list">
+              <li>Anotações</li>
+              <li>Utilidades</li>
+              <li>SketchUp Inteligente</li>
+              <li>Pontos Técnicos e Iluminação</li>
+              <li>Layout Inteligente</li>
+            </ul>
+
+            <div class="plan-spacer"></div>
+            <div class="plan-card-footer">
+              <span>Uso em até 2 máquinas</span>
+              <span>Acesso a todos os plugins</span>
+              <span>Fluxo completo e profissional</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="plans-action">
+          <a
+            href="https://app.francielimadeira.com"
+            class="btn-plans-cta"
+            target="_blank"
+            rel="noopener"
+            >Fazer login e escolher meu plano</a
+          >
+          <p class="plans-action-note">
+            Todos os planos são gerenciados no portal.
+            <strong>7 dias grátis para experimentar.</strong>
+          </p>
         </div>
       </div>
     </section>
@@ -774,9 +699,86 @@
 
         <div class="testimonials-grid" data-source="data/testimonials.json">
           <article class="testimonial-card">
-            <p class="testimonial-text">"Carregando depoimentos..."</p>
-            <p class="testimonial-author">Projeta+</p>
+            <p class="testimonial-quote">“</p>
+            <p class="testimonial-text">Carregando depoimentos...</p>
+            <div class="testimonial-footer">
+              <div class="testimonial-avatar">P+</div>
+              <div class="testimonial-meta">
+                <p class="testimonial-author">Projeta+</p>
+              </div>
+            </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="feedback-wall" id="comentarios-imagens">
+      <div class="container">
+        <p class="section-label">COMUNIDADE</p>
+        <h2>O que a comunidade está falando</h2>
+        <p class="feedback-wall-lead">
+          Prints reais de quem já usa o Projeta+ no dia a dia.
+        </p>
+      </div>
+
+      <div class="feedback-carousel" aria-label="Comentários em imagens">
+        <div class="feedback-track">
+          <figure class="feedback-shot feedback-shot--reference">
+            <img
+              src="assets/images/feedback/02.png"
+              alt="Comentário da comunidade 02"
+              loading="lazy"
+            />
+          </figure>
+          <figure class="feedback-shot">
+            <img
+              src="assets/images/feedback/01.png"
+              alt="Comentário da comunidade 01"
+              loading="lazy"
+            />
+          </figure>
+          <figure class="feedback-shot">
+            <img
+              src="assets/images/feedback/03.png"
+              alt="Comentário da comunidade 03"
+              loading="lazy"
+            />
+          </figure>
+          <figure class="feedback-shot">
+            <img
+              src="assets/images/feedback/06.png"
+              alt="Comentário da comunidade 06"
+              loading="lazy"
+            />
+          </figure>
+          <figure class="feedback-shot">
+            <img
+              src="assets/images/feedback/07.png"
+              alt="Comentário da comunidade 07"
+              loading="lazy"
+            />
+          </figure>
+          <figure class="feedback-shot">
+            <img
+              src="assets/images/feedback/08.png"
+              alt="Comentário da comunidade 08"
+              loading="lazy"
+            />
+          </figure>
+          <figure class="feedback-shot">
+            <img
+              src="assets/images/feedback/09.png"
+              alt="Comentário da comunidade 09"
+              loading="lazy"
+            />
+          </figure>
+          <figure class="feedback-shot">
+            <img
+              src="assets/images/feedback/10.png"
+              alt="Comentário da comunidade 10"
+              loading="lazy"
+            />
+          </figure>
         </div>
       </div>
     </section>
@@ -1009,55 +1011,6 @@
       </div>
     </footer>
 
-    <!-- Download Modal -->
-    <div
-      class="download-modal"
-      id="download-modal"
-      aria-hidden="true"
-      role="dialog"
-      aria-labelledby="download-title"
-    >
-      <div class="download-modal__overlay" data-modal-close></div>
-      <div class="download-modal__content" role="document">
-        <button
-          class="download-modal__close"
-          type="button"
-          aria-label="Fechar"
-          data-modal-close
-        >
-          ×
-        </button>
-        <h3 id="download-title">
-          Está pronta(o) para transformar seu fluxo no SketchUp?
-        </h3>
-        <p>Versão gratuita disponível. Sem complicação.</p>
-        <form class="download-form" id="download-form">
-          <label class="form-label" for="download-email">Email</label>
-          <input
-            type="email"
-            id="download-email"
-            name="email"
-            required
-            placeholder="voce@exemplo.com"
-          />
-          <label class="consent">
-            <input type="checkbox" id="download-consent" required />
-            <span
-              >Concordo em receber conteúdos e confirmo o uso do meu email para
-              envio do link e promocionais.</span
-            >
-          </label>
-          <button class="btn btn-primary" type="submit">
-            Começar agora com o Projeta+
-          </button>
-        </form>
-        <p class="download-status" role="status" aria-live="polite"></p>
-        <p class="download-disclaimer">
-          Versão gratuita disponível. Sem complicação.
-        </p>
-      </div>
-    </div>
-
-    <script src="js/main.js?v=20260213c"></script>
+    <script src="js/main.js?v=20260424a"></script>
   </body>
 </html>
